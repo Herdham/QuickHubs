@@ -22,7 +22,7 @@ fullname.addEventListener('keyup', () => {
         error.innerHTML = "Name must be at least 4 character"
         return false;
     }
-    else if(!fullname.value.match(/^[A-z][a-z]+[\s][A-Z][a-z]+$/)){
+    else if(!fullname.value.match(/^[A-z][a-z]+\s{1}[A-Z][a-z]+\s{1}[A-Za-z]*$/)){
         error.style.display = "block"
         error.innerHTML = "Name must start with capital letter and only character required"
         return false;
@@ -94,6 +94,11 @@ function validate(){
     if(fullname.value.length == 0){
         error.style.display = "block"
         error.innerHTML = "Last name required"
+        return false;
+    }
+    else if(!fullname.value.match(/^[A-z][a-z]+\s{1}[A-Z][a-z]+\s{1}[A-Za-z]*$/)){
+        error.style.display = "block"
+        error.innerHTML = ""
         return false;
     }
     else if(user.value.length == 0){
