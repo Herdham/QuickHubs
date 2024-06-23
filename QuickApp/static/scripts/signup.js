@@ -93,12 +93,12 @@ password.addEventListener('keyup', () => {
 function validate(){
     if(fullname.value.length == 0){
         error.style.display = "block"
-        error.innerHTML = "Last name required"
+        error.innerHTML = "Name required"
         return false;
     }
-    else if(!fullname.value.match(/^[A-z][a-z]+\s{1}[A-Z][a-z]+[A-Za-z]*$/)){
+    else if(!fullname.value.match(/^[A-z][a-z]+\s{1}[A-Z][a-z]*$/)){
         error.style.display = "block"
-        error.innerHTML = ""
+        error.innerHTML = "Name must equivalent to this e.g (John Smith)"
         return false;
     }
     else if(user.value.length == 0){
