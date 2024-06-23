@@ -211,7 +211,7 @@
 .allmain main .sucess{
     text-align: center;
     padding: 5px;
-    margin-top: 50px;
+    margin-top: 45px;
 }
 
 .allmain main .mainformpage{
@@ -253,11 +253,11 @@
 .allmain main .mainformpage form #errors{
     color: red;
     font-size: 13px;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid red;
     background-color: #ccc;
     margin-bottom: 6px;
-    border-radius: 2px;
+    border-radius: 5px;
     display: none;
 }
 
