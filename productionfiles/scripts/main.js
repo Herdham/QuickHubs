@@ -169,8 +169,51 @@ jQuery(() => {
         const x = category_inner.classList;
         x.contains("category_show") ? 
         (x.remove("category_show"), chevron.innerHTML = `<a href="#">Categories</a> <ion-icon name="chevron-down-outline"></ion-icon>`):
-        (x.add("category_show"), chevron.innerHTML = `<a href="#">Categories</a> <ion-icon name="chevron-up-outline"></ion-icon>`) 
+        (x.add("category_show"), chevron.innerHTML = `<a href="#">Categories</a> <ion-icon name="chevron-up-outline"></ion-icon>`)
     }
     category.addEventListener('click', category_hide);
 })
+
+const othersearch = document.querySelector("#OtherSearchBtn")
+const search_box1 = document.querySelector(".search_box1")
+
+
+jQuery(() => {
+    const first = $('.first')
+    const second = jQuery('.second')
+    const menu = jQuery('.menu')
+    othersearch.addEventListener('click', () => {
+        let search_box1 = document.createElement('div')
+        search_box1.setAttribute('class', 'search_box1')
+        let search = document.createElement('div')
+        search.setAttribute('class', 'searchs')
+        let inputs = document.createElement('input')
+        inputs.setAttribute('type', 'text')
+        inputs.setAttribute('id', 'searchsbar')
+        inputs.setAttribute('placeholder', 'What are you looking for')
+        let icons = document.createElement('ion-icon')
+        icons.setAttribute('name', 'search-outline')
+        icons.setAttribute('class', 'icons')
+        let icons1 = document.createElement('ion-icon')
+        icons1.setAttribute('name', 'close-outline')
+        icons1.setAttribute('class', 'icons_one')
+        search.append(inputs, icons)
+        search_box1.append(search, icons1)
+        $(second).before(search_box1)
+        $(first).hide()
+        $(second).hide()
+
+        if (icons1.classList.contains('icons_one')) {
+            icons1.addEventListener('click', () => {
+                $(search_box1).hide()
+                $(first).show()
+                $(second).show()
+            })
+        }
+    })
+})
+
+
+
+
 
