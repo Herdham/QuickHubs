@@ -1,0 +1,261 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Python Tutorial Course </title>
+        <link rel="stylesheet" href="{% static '/style/allcourses_css/python.css'%}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@300;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sahitya:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static '/images/logo/quickfav/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static '/images/logo/quickfav/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static '/images/logo/quickfav/favicon-16x16.png' %}">
+        <link rel="manifest" href="{% static '/images/logo/quickfav/site.webmanifest'%}">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   </head>
+           
+   <body>
+           <div class="allmainpage">
+               <menu>
+                    <div class="othersidebar">
+                        <h3>Python Tutorial</h3>
+                        <ul>
+                            <li><a href="{% url 'p_default' %}">Python Home</a></li>
+                            <li><a href="{% url 'p_intro' %}">Python Introduction</a></li>
+                            <li><a href="{% url 'p_begin' %}">Python Begin</a></li>
+                            <li><a href="#">Python Syntax</a></li>
+                            <li><a href="#">Python Comment</a></li>
+                            <li><a href="#">Python Variable</a></li>
+                            <li><a href="#">Python Datatypes</a></li>
+                            <li><a href="#">Python String</a></li>
+                            <li><a href="#">Python Number</a></li>
+                            <li><a href="#">Python Casting</a></li>
+                        </ul>
+                    </div>
+               </menu>
+
+                <nav>
+                    <div class="navbar">
+                        <!-- nav first -->
+                        <ion-icon name="menu-outline" class="menu"></ion-icon>
+                        <div class="first">
+                              
+                            <a href="/" class="logo">
+                                <img src="{% static '/images/logo/quicklogo1.png'%}" alt="">
+                                <h3>QuickHub</h3>
+                            </a>
+
+                            <div class="search">
+                                <input type="text" id="searchbtn" placeholder="What class are your looking for today?">
+                                <ion-icon name="close-outline" id="cancleBtn"></ion-icon>
+                                <ion-icon name="search-outline" id="searchBtn"></ion-icon>                                 
+                            </div>
+
+                            <ul class="moreabout">
+                                <li>
+                                    <a href="#">QuickHub Pro</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </li>
+                                <li>
+                                    <a href="#">Explore</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- nav second -->
+                    <div class="second">
+                        <ul>
+                            <li class="become"><a href="{% url 'become' %}">Become a Teacher</a></li>
+                            <li class="signin"><a href="{% url 'signin' %}">Sign In</a></li>
+                        </ul>
+                        <a href="{% url 'signup' %}" class="join">Join</a>
+                    </div>
+                    </div>
+                </nav>
+ 
+                <div class="carousel">
+                        <div class="scrollBtn">
+                            <ion-icon name="chevron-back-outline" id="scrollback"></ion-icon>
+                            <ion-icon name="chevron-forward-outline" id="scrollforward"></ion-icon>
+                        </div>
+                        <div class="categories_inner">
+                           <div class="category_wrapper">
+                                <li class="active"><a href="#">Web Development Course</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Mobile Development</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Python Technologies</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Education Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Arabic Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Business Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Forex Trading Course</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Freelancing Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Data Engineering</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Marketing Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Software Engineering</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Software Testing</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">AI Technologies</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                           </div>
+                        </div>
+                        <ul class="carouselbody">
+                            <li id="chevron" class="active flex"><a href="#">Categories</a><ion-icon name="chevron-down-outline" id="ion"></ion-icon></li>
+                            <li><a href="/html">HTML</a></li>
+                            <li><a href="#">C++</a></li>
+                            <li><a href="#">c#</a></li>
+                            <li><a href="#">Java</a></li>
+                            <li><a href="#">PHP</a></li>
+                            <li><a href="#">Ruby</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                            <li><a href="#">Scala</a></li>
+                            <li><a href="#">Groovy</a></li>
+                            <li><a href="#">Golang</a></li>
+                            <li><a href="#">SQL</a></li>
+                            <li><a href="#">MongoDB</a></li>
+                            <li><a href="#">Chemistry</a></li>
+                            <li><a href="#">Physics</a></li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">Math</a></li>
+                            <li><a href="#">Literature</a></li>
+                            <li><a href="#">More...</a></li>
+                        </ul>
+                </div>
+
+                <main>
+                    <div class="sidebar">
+                        <h3>Python Tutorial</h3>
+                        <ul>
+                            <li><a href="{% url 'p_default' %}">Python Home</a></li>
+                            <li><a href="{% url 'p_intro' %}">Python Introduction</a></li>
+                            <li><a href="{% url 'p_begin' %}">Python Begin</a></li>
+                            <li><a href="#">Python Syntax</a></li>
+                            <li><a href="#">Python Comment</a></li>
+                            <li><a href="#">Python Variable</a></li>
+                            <li><a href="#">Python Datatypes</a></li>
+                            <li><a href="#">Python String</a></li>
+                            <li><a href="#">Python Number</a></li>
+                            <li><a href="#">Python Casting</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="maincontainer">
+                        <div class="allmain">
+                            <h1>Python Tutorial</h1>
+                            <div class="prevNext">
+                                <a href="{% url 'p_default' %}">Previous</a>
+                                <a href="{% url 'p_intro' %}">Next</a>
+                            </div>
+                            
+                            
+                            <div class="studyeditor">
+                                <p>-> Before starting with this course let try and understand how computer works, how computer understand every instruction given to it</p>
+                                <p>-> The only language that the computer can process or execute is called machine language. Which are 
+                                    bunch of <b>0s and 1s</b> also known as (Binary representation) in short.
+                                </p>
+                                <p>-> And the instruction also called machine code. And the instruction given to computer in the form of machine code will be
+                                    executed directly by the CPU.
+                                </p>
+                                <p>-> Moreover the binary instructions also called op-codes or operation codes which can never be understood by humans.</p>
+                                <p>-> The image below is machine code</p><br>
+                                <img src="{% static 'images/machinecode.png'%}" alt="">
+                                <p>-> But how do computer execute how program or source code.</p>
+                                <p>That's when A compiler and interpreter plays a crucial role in programming language.</p>
+                                <p><b>What's a compiler</b></p>
+                                <p><b>A Comiler: </b> is a software that converts the source code to the object code.
+                                In the other words, we can say that it converts the high-level leanguage to machine/binary
+                                language. Moreover it is necessary to perform this step to maie the program executable.</p>
+                                <p>Is still a software that translates codes from a high-level programming language into machine
+                                    code before the program runs.
+                                </p>
+                                <p>While Interpreter as well works thesame as compiler but a little bit different</p>
+                                <p><b>An Interpreter: </b> An interpreter translates code written in a high-level Programming
+                                language into machine code but <b>line-by-line</b> as the code run.</p>
+                                <p>That's just the different the interpreter read code line-by-line to make the program executable.</p><br>
+                                <p>So now let move to python language itself and write some language in it</p>
+                                <p><b style="color: #000;">What's python?</b></p>
+                                <p>Python is a popular programming language.</p>
+                                <p>Python is a widely-used, interpreted, object-oriented, and high-level programming language
+                                    language with dynamic semantics, used for general-purpose programming. 
+                                </p>
+                                <p>Python can be used on a server to create web application.</p>
+                                
+                            </div>
+                             <h2>Learning by the example below</h2>  
+                            <div class="example">
+                                <h3>Example</h3>
+                                <div class="exampleinner">
+                                    <p style="color: red;"><span style="color: green;">print</span>("Hello World!")</p>
+                                </div>
+                            </div>
+                            <p>Try the example below in your code editor and see the output</p><br>
+                            <div class="optional">
+                                <h1>Optional Features</h1>
+                                <p>Log in to your account, and start earning points!</p>
+                                <p>With this optional Features you can study at QuickHub without any paid.</p>
+                            </div>
+
+                            <div class="prevNext">
+                                <a href="{% url 'p_default' %}">Previous</a>
+                                <a href="{% url 'p_intro' %}">Next</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer>
+                        <div class="first">
+                            <a href="#" class="logo">
+                                <img src="{% static '/images/logo/quicklogo1.png'%}" alt="">
+                                <h1>QuickHub</h1>
+                            </a>
+                            <p>QuickHub is a leading Ed Tech <br> company striving to provide the best <br> learning material on technical and non-<br>technical subjects.</p>
+                        </div>
+    
+                        <div class="seconds">
+                            <h1>About us</h1>
+                            <div class="secondInner">
+                                <ul>
+                                    <li><a href="#"> > Company </a></li>
+                                    <li><a href="#"> > Our Team </a></li>
+                                    <li><a href="#"> > Careers </a></li>
+                                    <li><a href="#"> > Jobs </a></li>
+                                    <li><a href="#"> > Contact Us </a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#"> > Term of use </a></li>
+                                    <li><a href="#"> > Privacy Policy </a></li>
+                                    <li><a href="#"> > Refund Policy </a></li>
+                                    <li><a href="#"> > Cookies Policy </a></li>
+                                    <li><a href="#"> > FAQ's </a></li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <div class="third">
+                            <div class="address">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <p>QuickHub Learning Institute Limited, <br>Along H.M.A Company Abuja, Nigeria</p>
+                            </div>
+                            <div class="social">
+                                <ul>
+                                    <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                                    <li><a href="#"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                                    <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                                    <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </footer>
+                </main>
+
+           </div>
+    
+           <script src="{% static '/scripts/all_courses_js/python.js'%}"></script>
+   </body>
+</html>

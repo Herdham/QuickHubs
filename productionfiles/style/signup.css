@@ -1,0 +1,373 @@
+:root{
+    --firstcolor: #ffd700;
+    --secondcolor: #000000;
+    --thirdcolor: #dddddd;
+    --fourthcolor: #333;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.allmain nav .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+    padding-left: 15px;
+    padding-right: 15px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.allmain nav .navbar .menu{
+    font-size: 30px;
+    margin-right: 10px;
+    display: none;
+}
+
+
+.allmain nav .navbar .first{
+    display: flex;
+    align-items: center;
+    flex-basis: 70%;
+}
+
+.allmain nav .navbar .first .logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.allmain nav .navbar .first .logo img{
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}
+
+.allmain nav .navbar .first .logo h3{
+    color: var(--secondcolor);
+    font-size: 22px;
+}
+
+.allmain nav .navbar .first .search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    margin-right: 15px;
+    flex-basis: 50%;
+}
+
+.allmain nav .navbar .first .search input{
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+    flex-grow: 1;
+}
+
+.allmain nav .navbar .first .search #searchBtn{
+    font-size: 20px;
+    background: var(--thirdcolor);
+    padding: 10px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    cursor: pointer;
+}
+
+.allmain nav .navbar .first .search #cancleBtn{
+    font-size: 22px;
+    font-weight: 900;
+    margin-right: 8px;
+    padding: 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: none;
+}
+
+.allmain nav .navbar .first ul{
+    display: flex;
+    align-items: center;
+}
+
+.allmain nav .navbar .first ul li{
+    margin-right: 20px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.allmain nav .navbar .first ul li:hover{
+    padding: 10px;
+    background-color: var(--thirdcolor);
+    border-radius: 2px;
+}
+
+.allmain nav .navbar .first ul li a{
+    text-decoration: none;
+    color: var(--secondcolor);
+    margin-right: 10px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.allmain nav .navbar .first ul li svg{
+    width: 20px;
+    height: 20px;
+}
+
+.allmain nav .navbar .second{
+    display: flex;
+    align-items: center;
+}
+
+.allmain nav .navbar .second ul{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    margin-right: 15px;
+}
+
+.allmain nav .navbar .second ul li{
+    list-style: none;
+    margin-right: 15px;
+}
+
+.allmain nav .navbar .second ul li:last-child a{
+    white-space: nowrap;
+}
+
+.allmain nav .navbar .second ul li a{
+    text-decoration: none;
+    color: var(--fourthcolor);
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.allmain nav .navbar .second ul li a:hover{
+    font-weight: 500;
+}
+
+.allmain nav .navbar .second .join{
+    padding: 8px;
+    border-radius: 2px;
+    border: 1px solid var(--firstcolor);
+    white-space: nowrap;
+    text-decoration: none;
+    width: 100px;
+    text-align: center;
+    color: var(--secondcolor);
+}
+
+.allmain nav .navbar .second .join:hover{
+    background-color: var(--firstcolor);
+    color: var(--secondcolor);
+    font-weight: 700;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+.allmain main{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.allmain main .sucess{
+    text-align: center;
+    padding: 5px;
+}
+
+.allmain main .mainformpage{
+    width: 400px;
+    height: auto;
+    background-color: #dddddd;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+}
+
+
+.allmain main .mainformpage h2{
+    text-align: center;
+    font-size: 20px;
+    color: green;
+}
+
+.allmain main .mainformpage p{
+    text-align: center;
+    font-size: 13px;
+}
+
+.allmain main .mainformpage form{
+    padding: 10px;
+}
+
+.allmain main .mainformpage form #error{
+    color: red;
+    font-size: 13px;
+    padding: 8px;
+    border: 1px solid red;
+    background-color: #ccc;
+    margin-bottom: 6px;
+    border-radius: 2px;
+    display: none;
+}
+
+.allmain main .mainformpage form #errors{
+    color: red;
+    font-size: 13px;
+    padding: 8px;
+    border: 1px solid red;
+    background-color: #ccc;
+    margin-bottom: 6px;
+    border-radius: 2px;
+    display: none;
+}
+
+.allmain main .mainformpage form input{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #333;
+    margin-bottom: 8px;
+}
+
+.allmain main .mainformpage form input:first-child{
+    outline: 1px solid #000000;
+}
+
+.allmain main .mainformpage form .check{
+    display: flex;
+    align-items: center;
+}
+
+.allmain main .mainformpage form .check input{
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    border: none;
+    outline: none;
+}
+
+.allmain main .mainformpage form select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.allmain main .mainformpage form .terms{
+    margin-bottom: 5px;
+}
+
+.allmain main .mainformpage form .terms input{
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    border: none;
+    outline: none;
+}
+
+
+.allmain main .mainformpage form .terms p{
+    font-size: 12px;
+}
+
+.allmain main .mainformpage form .terms p a{
+    text-decoration: none;
+    color: #333;
+}
+
+.allmain main .mainformpage form #submitBtn{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #000000;
+    color: #ffd700;
+    border-radius: 2px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.allmain main .mainformpage form p a{
+    text-decoration: none;
+}
+
+.allmain main .mainformpage form .verifyBtn{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.allmain main .mainformpage form .verifyBtn button:first-child{
+    margin-right: 10px;
+}
+
+.allmain main .mainformpage form .verifyBtn button:first-child a{
+    text-decoration: none;
+    color: #ffd700;
+}
+
+@media(max-width: 600px) {
+    .allmain nav .navbar .second ul li:first-child{
+        display: none;
+    }
+}
+
+@media(max-width: 500px) {
+    .allmain main .mainformpage{
+        width: 350px;
+    }
+}
+
+@media(max-width: 400px) {
+    .allmain main .mainformpage{
+        width: 300px;
+    }
+
+    .allmain main .sucess{
+        margin-top: 90px;
+    }
+
+    .allmain nav .navbar .second ul li:last-child{
+        display: none;
+    }
+}
+

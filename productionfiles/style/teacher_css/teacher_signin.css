@@ -1,0 +1,291 @@
+:root{
+    --firstcolor: #ffd700;
+    --secondcolor: #000000;
+    --thirdcolor: #dddddd;
+    --fourthcolor: #333;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.allmain nav .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+    padding-left: 15px;
+    padding-right: 15px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.allmain nav .navbar .menu{
+    font-size: 30px;
+    margin-right: 10px;
+    display: none;
+}
+
+
+.allmain nav .navbar .first{
+    display: flex;
+    align-items: center;
+    flex-basis: 70%;
+}
+
+.allmain nav .navbar .first .logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.allmain nav .navbar .first .logo img{
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}
+
+.allmain nav .navbar .first .logo h3{
+    color: var(--secondcolor);
+    font-size: 22px;
+}
+
+.allmain nav .navbar .first .search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    margin-right: 15px;
+    flex-basis: 50%;
+}
+
+.allmain nav .navbar .first .search input{
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+    flex-grow: 1;
+}
+
+.allmain nav .navbar .first .search #searchBtn{
+    font-size: 20px;
+    background: var(--thirdcolor);
+    padding: 10px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    cursor: pointer;
+}
+
+.allmain nav .navbar .first .search #cancleBtn{
+    font-size: 22px;
+    font-weight: 900;
+    margin-right: 8px;
+    padding: 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: none;
+}
+
+.allmain nav .navbar .first ul{
+    display: flex;
+    align-items: center;
+}
+
+.allmain nav .navbar .first ul li{
+    margin-right: 20px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.allmain nav .navbar .first ul li:hover{
+    padding: 10px;
+    background-color: var(--thirdcolor);
+    border-radius: 2px;
+}
+
+.allmain nav .navbar .first ul li a{
+    text-decoration: none;
+    color: var(--secondcolor);
+    margin-right: 10px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.allmain nav .navbar .first ul li svg{
+    width: 20px;
+    height: 20px;
+}
+
+.allmain nav .navbar .second{
+    display: flex;
+    align-items: center;
+}
+
+.allmain nav .navbar .second ul{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    margin-right: 15px;
+}
+
+.allmain nav .navbar .second ul li{
+    list-style: none;
+    margin-right: 15px;
+}
+
+.allmain nav .navbar .second ul li:last-child a{
+    white-space: nowrap;
+}
+
+.allmain nav .navbar .second ul li a{
+    text-decoration: none;
+    color: var(--fourthcolor);
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.allmain nav .navbar .second ul li a:hover{
+    font-weight: 500;
+}
+
+.allmain nav .navbar .second .join{
+    padding: 8px;
+    border-radius: 2px;
+    border: 1px solid var(--firstcolor);
+    white-space: nowrap;
+    text-decoration: none;
+    width: 100px;
+    text-align: center;
+    color: var(--secondcolor);
+}
+
+.allmain nav .navbar .second .join:hover{
+    background-color: var(--firstcolor);
+    color: var(--secondcolor);
+    font-weight: 700;
+}
+
+.allmain main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.allmain main .sucess{
+    text-align: center;
+    padding: 5px;
+    margin-top: 40px;
+}
+
+.allmain main .mainformpage{
+    width: 450px;
+    height: auto;
+    background-color: #fff;
+    border-top-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+}
+
+.allmain main .mainformpage h2{
+    text-align: center;
+}
+
+.allmain main .mainformpage p{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+.allmain main .mainformpage form input[type="text"], input[type="password"]{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+}
+
+.allmain main .mainformpage form #error{
+    color: red;
+    font-size: 13px;
+    padding: 8px;
+    border: 1px solid red;
+    background-color: #ccc;
+    margin-bottom: 6px;
+    border-radius: 2px;
+    display: none;
+}
+
+.allmain main .mainformpage form .checks{
+    display: flex;
+    align-items: center;
+}
+
+.allmain main .mainformpage form .checks input{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.allmain main .mainformpage form .checks p{
+    margin-top: 13px;
+}
+
+.allmain main .mainformpage form button{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    outline: none;
+    border: none;
+    background-color: #0b8a1c;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+@media(max-width: 600px) {
+    .allmain nav .navbar .second ul li:first-child{
+        display: none;
+    }
+}
+
+@media(max-width: 500px) {
+    .allmain main .mainformpage{
+        width: 350px;
+    }
+}
+
+@media(max-width: 400px) {
+    .allmain main .mainformpage{
+        width: 300px;
+    }
+
+    .allmain main .sucess{
+        margin-top: 90px;
+    }
+
+    .allmain nav .navbar .second ul li:last-child{
+        display: none;
+    }
+}
+

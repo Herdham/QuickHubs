@@ -1,0 +1,428 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.allProfile nav{
+    background-color: #dddddd;
+    box-shadow: 0px 0px 0px 1px  rgba(0, 0, 0, 0.25);
+    width: 100%;
+    padding: 10px;
+}
+
+.allProfile nav .profile_menu{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.allProfile nav .profile_menu #menu{
+    margin-right: auto;
+    font-size: 30px;
+    display: none;
+}
+
+.allProfile nav .profile_menu a{
+    color: #000;
+}
+
+.allProfile nav .profile_menu a ion-icon{
+    margin-right: 15px;
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 50px;
+    font-size: 22px;
+    box-shadow: 0px 0px 0px 1px  rgba(0, 0, 0, 0.25);
+}
+
+.allProfile nav .profile_menu .students_categories{
+   position: absolute;
+   top: 12%;
+   background-color: #fff;
+   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+   width: 250px;
+   height: auto;
+   border-radius: 2px;
+   z-index: 5;
+   display: none;
+}
+
+.allProfile nav .profile_menu .students_categories.dashboardopen{
+    display: block;
+}
+
+.allProfile nav .profile_menu .students_categories .userdetails{
+    background-color: #ffd700;
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.allProfile nav .profile_menu .students_categories .userdetails a{
+    margin-top: 5px;
+}
+
+.allProfile nav .profile_menu .students_categories .userdetails a ion-icon{
+    font-size: 15px;
+}
+
+.allProfile nav .profile_menu .students_categories ul{
+    padding: 10px;
+}
+
+.allProfile nav .profile_menu .students_categories ul li{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.allProfile nav .profile_menu .students_categories ul li ion-icon{
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+.allProfile nav .profile_menu .students_categories ul li a{
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.allProfile .sidebar{
+    background-color: #ccc;
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    padding: 20px;
+}
+
+.allProfile .sidebar .logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.allProfile .sidebar .logo img{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.allProfile .sidebar .logo h2{
+    font-size: 25px;
+    color: #000;
+}
+
+.allProfile .sidebar ul li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.allProfile .sidebar ul li:first-child{
+    background-color: #ffd700;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.allProfile .sidebar ul li ion-icon{
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.allProfile .sidebar ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+}
+
+.allProfile .otherside{
+    background-color: #ccc;
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    padding: 20px;
+    display: none;
+}
+
+.allProfile .otherside .logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.allProfile .otherside .logo img{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.allProfile .otherside .logo h2{
+    font-size: 25px;
+    color: #000;
+}
+
+.allProfile .otherside ul li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.allProfile .otherside ul li:first-child{
+    background-color: #ffd700;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.allProfile .otherside ul li ion-icon{
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.allProfile .otherside ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+}
+
+.allProfile main{
+    margin-left: 22%;
+    padding: 20px;
+}
+
+.allProfile main .student_dashboard{
+    background-color: #dddddd;
+    box-shadow: 0px 0px 0px 1px  rgba(0, 0, 0, 0.25);
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 3px;
+}
+
+.allProfile main .student_dashboard .student_header{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
+.allProfile main .student_dashboard .student_header ion-icon{
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+.allProfile main .student_dashboard .students_course_details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.allProfile main .student_dashboard .students_course_details a{
+    text-decoration: none;
+}
+
+.allProfile main .student_dashboard .students_course_details a .certification{
+    display: flex;
+    align-items: center;
+    background-color: rgb(137, 211, 240);
+    border-radius: 3px;
+    padding: 30px;
+}
+
+.allProfile main .student_dashboard .students_course_details a .certification ion-icon{
+    margin-right: 20px;
+    font-size: 40px;
+    color: rgb(10, 110, 64);
+}
+
+.allProfile main .student_dashboard .students_course_details a .certification .counter h4{
+    color: #000;
+    font-size: 30px;
+}
+
+.allProfile main .student_dashboard .students_course_details a .certification .counter p{
+    color: #000;
+}
+
+.allProfile main .student_dashboard .students_course_details a .courses{
+    display: flex;
+    align-items: center;
+    background-color: rgb(223, 162, 144);
+    border-radius: 3px;
+    padding: 30px;
+}
+
+.allProfile main .student_dashboard .students_course_details a .courses ion-icon{
+    margin-right: 20px;
+    font-size: 40px;
+    color: rgb(10, 110, 64);
+}
+
+.allProfile main .student_dashboard .students_course_details a .courses .counter h4{
+    color: #000;
+    font-size: 30px;
+}
+
+.allProfile main .student_dashboard .students_course_details a .courses .counter p{
+    color: #000;
+}
+
+
+.allProfile main .student_dashboard .students_course_details a .eBooks{
+    display: flex;
+    align-items: center;
+    background-color: rgb(188, 157, 238);
+    padding: 30px;
+    border-radius: 3px;
+}
+
+.allProfile main .student_dashboard .students_course_details a .eBooks ion-icon{
+    margin-right: 20px;
+    font-size: 40px;
+    color: rgb(10, 110, 64);
+}
+
+.allProfile main .student_dashboard .students_course_details a .eBooks .counter h4{
+    color: #000;
+    font-size: 30px;
+}
+
+.allProfile main .student_dashboard .students_course_details a .eBooks .counter p{
+    color: #000;
+}
+
+
+.allProfile main .purchase_courses{
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 1px  rgba(0, 0, 0, 0.25);
+    width: 100%;
+    padding: 20px;
+    border-radius: 3px;
+}
+
+.allProfile main .purchase_courses .purchase_header{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
+.allProfile main .purchase_courses .purchase_header ion-icon{
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+.allProfile main .purchase_courses .allPurchased_courses{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.allProfile main .purchase_courses .allPurchased_courses ion-icon{
+    font-size: 100px;
+    color: #dddddd;
+}
+
+
+@media (max-width: 1120px){
+
+    .allProfile .sidebar{
+        display: none;
+    }
+
+    .allProfile .otherside{
+        display: none;
+        z-index: 5;
+        width: 30%;
+    }
+
+    .allProfile .otherside.othersideopen{
+        display: block;
+    }
+
+    .allProfile .otherside .logo{
+        justify-content: flex-end;
+    }
+
+    .allProfile .otherside .logo img, h2{
+        margin-right: auto;
+    }
+
+    .allProfile .otherside .logo ion-icon{
+        font-size: 25px;
+        color: #000;
+    }
+
+    .allProfile main{
+        margin-left: 0%;
+        margin: 30px;
+    }
+
+    .allProfile nav .profile_menu #menu{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 900px){
+    .allProfile main .student_dashboard .students_course_details{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 15px;
+    }
+
+    .allProfile .otherside{
+        width: 40%;
+    }
+
+}
+
+@media (max-width: 600px){
+    .allProfile .otherside{
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px){
+    .allProfile main .student_dashboard .students_course_details{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .allProfile main .student_dashboard .student_header{
+        display: block;
+    }
+
+    .allProfile main .purchase_courses .purchase_header{
+        display: block;
+    }
+
+    .allProfile main .student_dashboard .student_header h2{
+        font-size: 20px;
+    }
+
+    .allProfile main .purchase_courses .purchase_header h2{
+        font-size: 20px;
+    }
+
+    .allProfile .otherside{
+        width: 60%;
+    }
+}
+
+@media (max-width: 400px){
+    .allProfile .otherside{
+        width: 70%;
+    }
+}

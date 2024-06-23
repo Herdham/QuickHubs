@@ -1,0 +1,916 @@
+:root{
+    --firstcolor: #ffd700;
+    --secondcolor: #000000;
+    --thirdcolor: #dddddd;
+    --fourthcolor: #333;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.allmainpage nav .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+    padding-left: 15px;
+    padding-right: 15px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.allmainpage nav .navbar .menu{
+    font-size: 30px;
+    margin-right: 10px;
+    display: none;
+}
+
+
+.allmainpage nav .navbar .first{
+    display: flex;
+    align-items: center;
+    flex-basis: 70%;
+}
+
+.allmainpage nav .navbar .first .logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.allmainpage nav .navbar .first .logo img{
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}
+
+.allmainpage nav .navbar .first .logo h3{
+    color: var(--secondcolor);
+    font-size: 22px;
+}
+
+.allmainpage nav .navbar .first .search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    margin-right: 15px;
+    flex-basis: 50%;
+}
+
+.allmainpage nav .navbar .first .search input{
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+    flex-grow: 1;
+}
+
+.allmainpage nav .navbar .first .search #searchBtn{
+    font-size: 20px;
+    background: var(--thirdcolor);
+    padding: 10px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    cursor: pointer;
+}
+
+.allmainpage nav .navbar .first .search #cancleBtn{
+    font-size: 22px;
+    font-weight: 900;
+    margin-right: 8px;
+    padding: 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: none;
+}
+
+.allmainpage nav .navbar .first ul{
+    display: flex;
+    align-items: center;
+}
+
+.allmainpage nav .navbar .first ul li{
+    margin-right: 20px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.allmainpage nav .navbar .first ul li:hover{
+    padding: 10px;
+    background-color: var(--thirdcolor);
+    border-radius: 2px;
+}
+
+.allmainpage nav .navbar .first ul li a{
+    text-decoration: none;
+    color: var(--secondcolor);
+    margin-right: 10px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.allmainpage nav .navbar .first ul li svg{
+    width: 20px;
+    height: 20px;
+}
+
+.allmainpage nav .navbar .second{
+    display: flex;
+    align-items: center;
+}
+
+.allmainpage nav .navbar .second ul{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    margin-right: 15px;
+}
+
+.allmainpage nav .navbar .second ul li{
+    list-style: none;
+    margin-right: 15px;
+}
+
+.allmainpage nav .navbar .second ul li:last-child a{
+    white-space: nowrap;
+}
+
+.allmainpage nav .navbar .second ul li a{
+    text-decoration: none;
+    color: var(--fourthcolor);
+    font-weight: 400;
+}
+
+.allmainpage nav .navbar .second ul li a:hover{
+    font-weight: 500;
+}
+
+.allmainpage nav .navbar .second .join{
+    padding: 8px;
+    border-radius: 2px;
+    border: 1px solid var(--firstcolor);
+    white-space: nowrap;
+    text-decoration: none;
+    width: 100px;
+    text-align: center;
+    color: var(--secondcolor);
+}
+
+.allmainpage nav .navbar .second .join:hover{
+    background-color: var(--firstcolor);
+    color: var(--secondcolor);
+    font-weight: 700;
+}
+
+
+.allmainpage menu .othersidebar{
+    width: 20%;
+    height: 100vh;
+    background-color: #dddddd;
+    position: fixed;
+    padding: 15px;
+    padding-top: 130px;
+    overflow-y: scroll;
+    display: none;
+    z-index: 5;
+}
+
+.allmainpage menu .othersidebar h3{
+    color: #000;
+    font-weight: 200;
+    margin-bottom: 8px;
+}
+
+.allmainpage menu .othersidebar ul{
+    padding: 10px;
+}
+
+.allmainpage menu .othersidebar ul li{
+    list-style: none;
+    padding: 8px;
+}
+
+.allmainpage menu .othersidebar ul li:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+.allmainpage menu .othersidebar ul li.active{
+    background-color: green;
+}
+
+.allmainpage menu .othersidebar ul li.active a{
+    color: #fff;
+}
+
+.allmainpage menu .othersidebar ul li a{
+    text-decoration: none;
+    color: #000;
+    white-space: nowrap;
+}
+
+.newelement{
+    position: absolute;
+    max-width: 250px;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    padding: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    display: none;
+}
+.newelement:hover{
+    background-color: var(--thirdcolor);
+}
+
+.newelement h4{
+    text-align: center;
+    text-decoration: none;
+    color: var(--secondcolor);
+}
+
+.newelement p{
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--secondcolor);
+}
+
+.newelement.newdisplay{
+    display: block;
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+.newelement2{
+    position: absolute;
+    max-width: 50%;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    padding: 10px;
+    margin-top: 290px;
+    cursor: pointer;
+    display: none;
+}
+
+.newelement2 .eleinner{
+    padding: 10px;
+}
+
+.newelement2 .eleinner:hover{
+    background-color: var(--thirdcolor);
+    padding: 10px;
+}
+
+
+.newelement2 h4{
+    text-decoration: none;
+    color: var(--secondcolor);
+}
+
+.newelement2 p{
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--secondcolor);
+}
+
+.newelement2.newdisplay2{
+    display: block;
+}
+
+.rotate1{
+    transform: rotate(180deg);
+}
+
+
+
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+
+.allmainpage .carousel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    position: fixed;
+    padding-top: 60px;
+    background-color: #dddddd;
+    width: 100%;
+    z-index: 8;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+}
+
+.allmainpage .carousel .scrollBtn{
+    display: flex;
+    align-items: center;
+    
+}
+
+.allmainpage .carousel .scrollBtn ion-icon{
+    position: absolute;
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 50px;
+}
+
+.allmainpage .carousel .scrollBtn ion-icon:last-child{
+    left: 96.5%;
+}
+
+
+.allmainpage .carousel ul{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.allmainpage .carousel ul li{
+    list-style: none;
+    margin-right: 20px;
+    padding: 10px;
+    color: #333;
+}
+
+.allmainpage .carousel ul li:first-child{
+    margin-left: 45px;
+    background-color: #ffd700;
+    padding: 7px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.allmainpage .carousel ul li:last-child{
+    margin-right: 35px;
+    font-weight: 700;
+}
+
+
+.allmainpage .carousel ul .active a{
+    margin-right: 20px;
+}
+
+.allmainpage .carousel ul li a{
+    text-decoration: none;
+    color: #000;
+    white-space: nowrap;
+}
+
+.allmainpage .carousel .categories_inner{
+    left: 4%;
+    top: 120px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    width: 300px;
+    padding: 10px;
+    z-index: 5; 
+    display: none;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.allmainpage .carousel .categories_inner.category_show{
+    display: block;
+}
+
+.allmainpage .carousel .categories_inner .category_wrapper li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 8px;
+}
+
+.allmainpage .carousel .categories_inner .category_wrapper li.active{
+    background-color: #ffd700;
+    color: #000;
+    padding: 8px;
+    border-radius: 2px;
+}
+
+.allmainpage .carousel .categories_inner .category_wrapper li:hover{
+    background-color: #ffd700;
+    color: #000;
+    border-radius: 2px;
+}
+
+.allmainpage .carousel .categories_inner .category_wrapper li a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+.allmainpage main .sidebar{
+    width: 20%;
+    height: 100vh;
+    background-color: #dddddd;
+    position: fixed;
+    padding: 15px;
+    padding-top: 130px;
+    overflow-y: scroll;
+}
+
+.allmainpage main .sidebar h3{
+    color: #000;
+    font-weight: 200;
+    margin-bottom: 8px;
+}
+
+.allmainpage main .sidebar ul{
+    padding: 10px;
+}
+
+.allmainpage main .sidebar ul li{
+    list-style: none;
+    padding: 8px;
+}
+
+.allmainpage main .sidebar ul li:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+.allmainpage main .sidebar ul li.active{
+    background-color: green;
+}
+
+.allmainpage main .sidebar ul li.active a{
+    color: #fff;
+}
+
+.allmainpage main .sidebar ul li a{
+    text-decoration: none;
+    color: #000;
+    white-space: nowrap;
+}
+
+
+.allmainpage main .maincontainer{
+    margin-left: 22%;
+    margin-right: 70px;
+    padding-top: 170px;
+}
+
+.allmainpage main .maincontainer b{
+    color: red;
+}
+
+.allmainpage main .maincontainer .allmain{
+    padding: 30px;
+}
+
+.allmainpage main .maincontainer h1{
+    margin-bottom: 10px;
+}
+
+.allmainpage main .maincontainer .prevNext{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.allmainpage main .maincontainer .prevNext a{
+    outline: none;
+    border: none;
+    background-color: green;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.allmainpage main .maincontainer .prevNext a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+}
+
+.allmainpage main .maincontainer .study{
+    background-color: #cff5ed;
+    padding: 35px;
+    line-height: 3;
+    margin-bottom: 20px;
+}
+
+.allmainpage main .maincontainer .studyeditor{
+    background-color: #cff5ed;
+    padding: 35px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.allmainpage main .maincontainer .step img{
+    width: 400px;
+}
+
+.allmainpage main .maincontainer .step a{
+    text-decoration: none;
+    color: #000;
+}
+
+.allmainpage main .maincontainer .step p b{
+    color: red;
+}
+
+
+.allmainpage main .maincontainer .studyeditor p{
+    line-height: 2;
+}
+
+.allmainpage main .maincontainer .studyeditor p b{
+    color: red;
+}
+
+.allmainpage main .maincontainer .studyeditor ul{
+    padding: 20px;
+}
+
+.allmainpage main .maincontainer .study button{
+    background-color: green;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.allmainpage main .maincontainer .study button a{
+    text-decoration: none;
+    white-space: nowrap;
+    color: #fff;
+}
+
+.allmainpage main .maincontainer .example{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #dddddd;
+    padding: 10px;
+}
+
+.allmainpage main .maincontainer .example h3{
+    margin-bottom: 10px;
+}
+
+.allmainpage main .maincontainer .example .exampleinner{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.allmainpage main .maincontainer .example .exampleinner p{
+    display: flex;
+    align-items: center;
+    color: green;
+}
+
+.allmainpage main .maincontainer .example  .exampleinner .tags{
+    display: flex;
+    align-items: center;
+}
+
+.allmainpage main .maincontainer .example  .exampleinner .tags span{
+    color: red;
+    margin-left: 20px;
+}
+
+
+.allmainpage main .maincontainer .example_explain ul li span b{
+    color: red;
+}
+
+.allmainpage main .maincontainer .summary{
+    padding: 20px;
+}
+
+.allmainpage main .maincontainer .summary ul li{
+    list-style: none;
+}
+
+
+.allmainpage main .maincontainer .optional{
+    background-color: #cff5ed;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.allmainpage main .maincontainer .optional h1{
+    color: green;
+}
+
+.allmainpage footer{
+    background-color: #dddddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-left: 22%;
+}
+
+.allmainpage footer .first a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.allmainpage footer .first a img{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.allmainpage footer .first a h1{
+    font-size: 35px;
+    color: #000000;
+}
+
+.allmainpage footer .seconds h1{
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.allmainpage footer .seconds .secondInner{
+    display: flex;
+    align-items: center;
+}
+
+.allmainpage footer .seconds .secondInner ul li{
+    list-style: none;
+}
+
+.allmainpage footer .seconds .secondInner ul li a{
+    text-decoration: none;
+    color: #333;
+}
+
+.allmainpage footer .seconds .secondInner ul:first-child{
+    margin-right: 70px;
+}
+
+.allmainpage footer .third .address{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.allmainpage footer .third .address ion-icon{
+   align-self: flex-start;
+   font-size: 30px;
+}
+
+.allmainpage footer .third .address p{
+    align-self: flex-end;
+ }
+
+
+.allmainpage footer .third .social ul{
+    display: flex;
+    align-items: center;
+}
+
+.allmainpage footer .third .social ul li{
+    list-style: none;
+    margin-right: 10px;
+}
+
+.allmainpage footer .third .social ul li a{
+    color: #ccc;
+}
+
+.allmainpage footer .third .social ul li a ion-icon{
+    padding: 10px;
+    background-color: #333;
+    border-radius: 50px;
+    font-size: 30px;
+}
+
+
+
+@media (max-width: 1120px){
+    .allmainpage nav .navbar .second ul .become{
+        display: none;
+    }
+
+    .allmainpage nav .navbar .second .join{
+        padding: 7px;
+        width: 80px;
+    }
+
+    .allmainpage main .carousel{
+        margin-top: 5px;
+    }
+
+    .allmainpage footer{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+    }
+
+    .allmainpage footer .first, .seconds, .third{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 900px){
+
+    .allmainpage nav .navbar .first{
+        flex-basis: 80%;
+    }
+
+    .allmainpage nav .navbar .first .search{
+        flex-basis: 65%;
+    }
+
+    .allmainpage nav .navbar .first ul{
+        display: none;
+    }
+
+    .allmainpage nav .navbar .second ul .signin {
+        display: none;
+    }
+
+    .allmainpage nav .navbar .menu{
+        display: block;
+    }
+
+    .allmainpage .carousel .scrollBtn ion-icon:last-child{
+        left: 95%;
+    }
+
+    .allmainpage main .sidebar{
+        display: none;
+    }
+
+    .allmainpage menu .othersidebar{
+        display: none;
+        width: 35%;
+    }
+
+    .allmainpage menu .othersidebar.open{
+        display: block;
+    }
+
+    .allmainpage main .maincontainer{
+        margin-left: 0%;
+        margin-right: 10px;
+    }
+
+    .allmainpage footer{
+        margin-left: 0%;
+    }
+
+}
+
+/* @media (max-width: 800px){
+    .allmainpage main .maincontainer .example_explain ul li span{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        font-size: 12px;
+    }
+
+    .allmainpage main .maincontainer .example_explain ul li p{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        font-size: 12px;
+    }
+} */
+
+@media (max-width: 600px){
+    .allmainpage nav .navbar .first .search{
+        display: none;
+    }
+
+    .allmainpage menu .menu{
+        display: none;
+        width: 45%;
+    }
+
+    .allmainpage nav .navbar .first{
+        justify-content: center;
+    }
+
+
+    .allmainpage .carousel .scrollBtn ion-icon:last-child{
+        left: 92%;
+    }
+
+    .allmainpage menu .othersidebar{
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 500px){
+
+    .allmainpage .carousel .scrollBtn ion-icon:last-child{
+        left: 90%;
+    }
+
+    .allmainpage main .maincontainer .studyeditor h1{
+        font-size: 20px;
+    }
+
+    .allmainpage main .maincontainer .step h1{
+        font-size: 20px;
+    }
+
+    .allmainpage main .maincontainer .step img{
+        width: 300px;
+    }
+
+}
+
+@media (max-width: 400px){
+    .allmainpage nav .navbar .first .logo h3{
+        display: none;
+    }
+
+    .allmainpage nav .navbar .first .logo img{
+        width: 30px;
+        height: 30px;
+        flex-grow: 1;
+    }
+
+    .allmainpage main .carousel .scrollBtn ion-icon:last-child{
+        left: 85%;
+    }
+
+    .allmainpage menu .othersidebar{
+        width: 60%;
+    }
+
+    .allmainpage main footer{
+        display: block;
+    }
+
+    .allmainpage main footer .first a img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .allmainpage main footer .first a h1{
+        font-size: 30px;
+    }
+    
+    .allmainpage main footer .first p{
+        font-size: 13px;
+    }
+
+    .allmainpage main footer .seconds h1{
+        font-size: 30px;
+    }
+
+    .allmainpage main footer .seconds .secondInner ul li a{
+        font-size: 13px;
+    }
+
+    .allmainpage main footer .third .address p{
+        font-size: 13px;
+    }
+
+    .allmainpage main footer .third .social ul li a ion-icon{
+        font-size: 20px;
+    }
+}

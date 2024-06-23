@@ -1,0 +1,432 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>QuickHub - Online Tutorial & Freelance Service Marketplace</title>
+        <link rel="stylesheet" href="{% static 'style/main.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@300;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sahitya:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static '/images/logo/quickfav/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static '/images/logo/quickfav/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static '/images/logo/quickfav/favicon-16x16.png' %}">
+        <link rel="manifest" href="{% static '/images/logo/quickfav/site.webmanifest' %}">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   </head>
+           
+   <body>
+           <div class="allmainpage">
+                <menu>
+                    <div class="menu">
+                        <div class="menu_join flex">
+                            <a href="#"><button type="button">Join</button></a>
+                            <ion-icon name="close-outline" class="menuclose"></ion-icon>
+                        </div>
+
+                        <div class="menu_categories">
+                            <ul>
+                                <li class="flex"><ion-icon name="business-outline"></ion-icon><a href="#">Top Seller</a></li>
+                                <li class="flex"><ion-icon name="bag-outline"></ion-icon><a href="{% url 'become' %}">Become a Teacher</a></li>
+                                <li class="flex"><ion-icon name="bag-outline"></ion-icon><a href="#">Jobs</a></li>
+                                <li class="flex"><ion-icon name="grid-outline"></ion-icon><a href="#">QuickHub Pro</a></li>
+                                <li class="flex"><ion-icon name="library-outline"></ion-icon><a href="#">Library</a></li>
+                                <li class="flex"><ion-icon name="book-outline"></ion-icon><a href="#">Ebooks</a></li>
+                                <li class="flex"><ion-icon name="build-outline"></ion-icon><a href="#">Tools</a></li>
+                                <li class="flex"><ion-icon name="log-in-outline"></ion-icon><a href="#">Sign In</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </menu>
+
+                <nav>
+                    <div class="navbar">
+                        <!-- nav first -->
+                        <ion-icon name="menu-outline" class="menu"></ion-icon>
+                        <div class="first">
+                              
+                            <a href="#" class="logo">
+                                <img src="{% static '/images/logo/quicklogo1.png' %}" alt="">
+                                <h3>QuickHub</h3>
+                            </a>
+
+                            <div class="search">
+                                <input type="text" id="searchbtn" placeholder="What class are your looking for today?">
+                                <ion-icon name="close-outline" id="cancleBtn"></ion-icon>
+                                <ion-icon name="search-outline" id="searchBtn"></ion-icon>                                 
+                            </div>
+
+                            <ul class="moreabout">
+                                <li>
+                                    <a href="#">QuickHubs Pro</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </li>
+                                <li>
+                                    <a href="#">Explore</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- nav second -->
+                    <div class="second">
+                        <ul>
+                            <li class="become"><a href="{% url 'become' %}">Become a Teacher</a></li>
+                            <li class="signin"><a href="{% url 'signin' %}">Sign In</a></li>
+                        </ul>
+                        <a href="{% url 'signup' %}" class="join">Join</a>
+                    </div>
+                    </div>
+                </nav>
+
+                <main>
+                    
+                    <div class="carousel">
+                        <div class="scrollBtn">
+                            <ion-icon name="chevron-back-outline" id="scrollback"></ion-icon>
+                            <ion-icon name="chevron-forward-outline" id="scrollforward"></ion-icon>
+                        </div>
+                        <div class="categories_inner">
+                           <div class="category_wrapper">
+                                <li class="active"><a href="#">Web Development Course</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Mobile Development</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Python Technologies</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Education Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Arabic Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Business Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Forex Trading Course</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Freelancing Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Data Engineering</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Marketing Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Software Engineering</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Software Testing</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">AI Technologies</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                           </div>
+                        </div>
+                        <ul class="carouselbody">
+                            <li id="chevron" class="active flex"><a href="#">Categories</a><ion-icon name="chevron-down-outline" id="ion"></ion-icon></li>
+                            <li><a href="{% url 'p_default' %}">Python</a></li>
+                            <li><a href="html/">HTMLs</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                            <li><a href="#">C++</a></li>
+                            <li><a href="#">c#</a></li>
+                            <li><a href="#">Java</a></li>
+                            <li><a href="#">PHP</a></li>
+                            <li><a href="#">Ruby</a></li>
+                            <li><a href="{% url 'default' %}">Hijamah</a></li>
+                            <li><a href="#">Scala</a></li>
+                            <li><a href="#">Groovy</a></li>
+                            <li><a href="#">Golang</a></li>
+                            <li><a href="#">SQL</a></li>
+                            <li><a href="#">MongoDB</a></li>
+                            <li><a href="#">Chemistry</a></li>
+                            <li><a href="#">Physics</a></li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">Math</a></li>
+                            <li><a href="#">Literature</a></li>
+                            <li><a href="#">More...</a></li>
+                        </ul>
+                    </div>
+                    <div class="search_box">
+                        <input type="text" id="searchbar" autocomplete="off" placeholder="Search for any services....">
+                        <ion-icon name="close-outline" id="cancle_btn"></ion-icon>
+                        <ion-icon name="search-outline" id="search_btn"></ion-icon>
+                    </div>
+                    <div class="maincontainer">
+                        <div class="mainwrapper">
+                            <div class="mainheading">
+                                <h1>Find the right <b>learning</b> <br>services, right away</h1>
+                                <div class="search_box">
+                                    <input type="text" id="searchbar" autocomplete="off" placeholder="Search for any services....">
+                                    <ion-icon name="close-outline" id="cancle_btn"></ion-icon>
+                                    <ion-icon name="search-outline" id="search_btn"></ion-icon>
+                                </div>
+                                <div class="populars">
+                                    <h4>Popular:</h4>
+                                    <ul>
+                                        <li><a href="#">Data Science</a></li>
+                                        <li><a href="#">Python</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Artificial Intelligence</a></li>
+                                    </ul>
+                                </div>
+                                <p>"Develop a passion for learning. If you do, you will never cease to grow. <br>Because a great aim of education is not about knowledge but action."</p>
+                                <p>"In learning you will teach, and in teaching you will learn."</p>
+                                <p>Ignite your coding potential with our online Coding Ground - an immersive <br>online platform for hands-on learning, collaboration, and skill development.</p>
+                            </div>
+                        </div>
+                        <div class="mainimage">
+                            <img src="{% static '/images/imageone.png' %}" id="images" alt="">
+                        </div>
+                    </div>
+                    
+                    <div class="popular">
+                        <h1>Popular Topics</h1>
+                        <div class="scroll">
+                            <ion-icon name="chevron-back-outline" id="forwardBtn"></ion-icon>
+                            <ion-icon name="chevron-forward-outline" id="backwardBtn"></ion-icon>
+                        </div>
+                        <div class="popularCourses">
+                            <ul>
+                                <li><a href="#">Web Development</a></li>
+                                <li><a href="#">Mobile Development</a></li>
+                                <li><a href="#">Education Courses</a></li>
+                                <li><a href="#">Arabic Courses</a></li>
+                                <li><a href="#">Business Courses</a></li>
+                                <li><a href="#">Freelancer Courses</a></li>
+                                <li><a href="#">Forex Trading Courses</a></li>
+                                <li><a href="#">Marketing Courses</a></li>
+                                <li><a href="#">Data Engineering Courses</a></li>
+                            </ul>
+                        </div>
+                    </div><br>
+
+                    <div class="viewCourses">
+                        <div class="viewheading">
+                            <h1>Start <b>Learning</b></h1>
+                            <div class="viewBtn flex">
+                                <a href="#"><button type="button">See All</button></a>
+                                <ion-icon name="chevron-back-outline" id="firstBtn"></ion-icon>
+                                <ion-icon name="chevron-forward-outline" id="lastBtn"></ion-icon>
+                            </div>
+                        </div>
+
+                        <div class="viewContainer">
+                            <div class="viewWrapper">
+                               <a href="html/">
+                                <p>Start Learning</p>
+                                <h2>HTML</h2>
+                               </a>
+                            </div>
+                            <div class="viewWrapper">
+                                <a href="#">
+                                    <p>Start Learning</p>
+                                    <h2>JavaScript</h2>
+                                </a>
+                            </div>
+                            <div class="viewWrapper">
+                                <a href="#">
+                                    <p>Start Learning</p>
+                                    <h2>Python</h2>
+                                </a>
+                            </div>
+                            <div class="viewWrapper">
+                                <a href="#">
+                                    <p>Start Learning</p>
+                                    <h2>C++</h2>
+                                </a>
+                            </div>
+                            <div class="viewWrapper">
+                                <a href="#">
+                                    <p>Start Learning</p>
+                                    <h2>Java</h2>
+                                </a>
+                            </div>
+                            <div class="viewWrapper">
+                                <a href="#">
+                                    <p>Start Learning</p>
+                                    <h2>CSS</h2>
+                                </a>
+                            </div>
+                            <div class="viewWrapper">
+                                <a href="#">
+                                    <p>Start Learning</p>
+                                    <h2>SQL</h2>
+                                </a>
+                            </div>
+                            <div class="viewWrapper">
+                                <a href="#">
+                                    <p>Start Learning</p>
+                                    <h2>PHP</h2>
+                                </a>
+                            </div>
+                        </div>
+                    </div><br>
+
+                    <div class="tutoriallab">
+                        <h1>Tutorials <b>Library</b></h1>
+                        <p>Master any technology with our largest free online Library</p>
+
+                        <div class="tutorialwrapper">
+                            <div class="tutorialcontainer">
+                                <div class="tutorheading">
+                                    <h4>Web Development</h4>
+                                    <button type="button"><a href="#">See all</a></button>
+                                </div>
+                                
+                                <div class="tutorcourse">
+                                    <a href="html/">
+                                        <div class="tutorinner">
+                                            <img src="{% static '/images/allcourses/html_icon.svg'%}" alt="">
+                                            <h5>Html Tutorial</h5>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="tutorinner">
+                                            <img src="{% static '/images/allcourses/css_icon.svg' %}" alt="">
+                                            <h5>CSS Tutorial</h5>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="tutorinner">
+                                            <img src="{% static '/images/allcourses/javascript_icon.svg'%}" alt="">
+                                            <h5>JS Tutorial</h5>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="tutorinner">
+                                            <img src="{% static '/images/allcourses/python_icon.svg'%}" alt="">
+                                            <h5>Python Tutorial</h5>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="tutorinner">
+                                            <img src="{% static '/images/allcourses/vuejs_icon.svg'%}" alt="">
+                                            <h5>Vue Tutorial</h5>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="tutorinner">
+                                            <img src="{% static '/images/allcourses/typescript_icon.svg'%}" alt="">
+                                            <h5>Typescript Tutorial</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                            </div>
+                            <div class="tutorialcontainer">
+                                <div class="tutorheading">
+                                    <h4>Programming Language</h4>
+                                    <button type="button"><a href="#">See all</a></button>
+                                </div>
+                                
+                                <div class="tutorcourse">
+                                    <a href="#">
+                                        <div class="tutorinner">
+                                            <img src="{% static '/images/allcourses/python_icon.svg'%}" alt="">
+                                            <h5>Python Tutorial</h5>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="tutorinner">
+                                            <img src="{% static '/images/allcourses/cplusplus_icon.svg'%}" alt="">
+                                            <h5>C++ Tutorial</h5>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="tutorinner">
+                                            <img src="{% static '/images/allcourses/ruby_icon.svg'%}" alt="">
+                                            <h5>Ruby Tutorial</h5>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="tutorinner">
+                                            <img src="{% static '/images/allcourses/java_icon.svg'%}" alt="">
+                                            <h5>Java Tutorial</h5>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="tutorinner">
+                                            <img src="{% static '/images/allcourses/csharp_icon.svg'%}" alt="">
+                                            <h5>C_Sharp Tutorial</h5>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="tutorinner">
+                                            <img src="{% static '/images/allcourses/jquery_icon.svg'%}" alt="">
+                                            <h5>Jquery Tutorial</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="tutorBtn">
+                            <button type="button">See All</button>
+                            <div class="tutoricon">
+                                <ion-icon name="chevron-back-outline" id="firstBtn"></ion-icon>
+                                <ion-icon name="chevron-forward-outline" id="lastBtn"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="membership">
+                        <div class="annual">
+                            <div class="annualWrap">
+                                <h2>Annual Membership</h1>
+                                <p>Become a valued member of Tutorials Point and enjoy unlimited access to our vast library of top-rated Video Courses</p>
+                                <button>Suscribe Now!</button>
+                            </div>
+                            <img src="{% static '/images/annual-membership.jpg'%}" alt="">
+                        </div>
+                        <div class="certification">
+                            <div class="certificateWrap">
+                                <h2>Online Certifications</h1>
+                                <p>Master prominent technologies at full length and become a valued certified professional.</p>
+                                <button>Explore Now!</button>
+                            </div>
+                            <img src="{% static '/images/traning-for-a-team.jpg'%}" alt="">
+                        </div>
+                    </div>
+                </main>
+
+                <footer>
+                    <div class="first">
+                        <a href="#" class="logo">
+                            <img src="{% static '/images/logo/quicklogo1.png' %}" alt="">
+                            <h1>QuickHub</h1>
+                        </a>
+                        <p>QuickHub is a leading Ed Tech <br> company striving to provide the best <br> learning material on technical and non-<br>technical subjects.</p>
+                    </div>
+
+                    <div class="seconds">
+                        <h1>About us</h1>
+                        <div class="secondInner">
+                            <ul>
+                                <li><a href="#"> > Company </a></li>
+                                <li><a href="#"> > Our Team </a></li>
+                                <li><a href="#"> > Careers </a></li>
+                                <li><a href="#"> > Jobs </a></li>
+                                <li><a href="#"> > Contact Us </a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#"> > Term of use </a></li>
+                                <li><a href="#"> > Privacy Policy </a></li>
+                                <li><a href="#"> > Refund Policy </a></li>
+                                <li><a href="#"> > Cookies Policy </a></li>
+                                <li><a href="#"> > FAQ's </a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="third">
+                        <div class="address">
+                            <ion-icon name="location-outline"></ion-icon>
+                            <p>QuickHub Learning Institute Limited, <br>Along H.M.A Company Abuja, Nigeria</p>
+                        </div>
+                        <div class="social">
+                            <ul>
+                                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                                <li><a href="#"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                                <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+           </div>
+
+        
+           <script src="{% static 'scripts/main.js' %}"></script>
+   </body>
+    
+</html>

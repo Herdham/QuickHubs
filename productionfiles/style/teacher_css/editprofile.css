@@ -1,0 +1,458 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.allProfile nav{
+    background-color: #dddddd;
+    box-shadow: 0px 0px 0px 1px  rgba(0, 0, 0, 0.25);
+    width: 100%;
+    padding: 10px;
+}
+
+.allProfile nav .profile_menu{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.allProfile nav .profile_menu #menu{
+    margin-right: auto;
+    font-size: 30px;
+    display: none;
+}
+
+.allProfile nav .profile_menu a{
+    color: #000;
+}
+
+.allProfile nav .profile_menu a ion-icon{
+    margin-right: 15px;
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 50px;
+    font-size: 22px;
+    box-shadow: 0px 0px 0px 1px  rgba(0, 0, 0, 0.25);
+}
+
+.allProfile nav .profile_menu .students_categories{
+   position: absolute;
+   top: 12%;
+   background-color: #fff;
+   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+   width: 250px;
+   height: auto;
+   border-radius: 2px;
+   z-index: 5;
+   display: none;
+}
+
+.allProfile nav .profile_menu .students_categories.dashboardopen{
+    display: block;
+}
+
+.allProfile nav .profile_menu .students_categories .userdetails{
+    background-color: #ffd700;
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.allProfile nav .profile_menu .students_categories .userdetails a{
+    margin-top: 5px;
+}
+
+.allProfile nav .profile_menu .students_categories .userdetails a ion-icon{
+    font-size: 15px;
+}
+
+.allProfile nav .profile_menu .students_categories ul{
+    padding: 10px;
+}
+
+.allProfile nav .profile_menu .students_categories ul li{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.allProfile nav .profile_menu .students_categories ul li ion-icon{
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+.allProfile nav .profile_menu .students_categories ul li a{
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.allProfile .sidebar{
+    background-color: #ccc;
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    padding: 20px;
+}
+
+.allProfile .sidebar .logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.allProfile .sidebar .logo img{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.allProfile .sidebar .logo h2{
+    font-size: 25px;
+    color: #000;
+}
+
+.allProfile .sidebar ul li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.allProfile .sidebar ul li:first-child{
+    background-color: #ffd700;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.allProfile .sidebar ul li ion-icon{
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.allProfile .sidebar ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+}
+
+.allProfile .otherside{
+    background-color: #ccc;
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    padding: 20px;
+    display: none;
+}
+
+.allProfile .otherside .logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.allProfile .otherside .logo img{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.allProfile .otherside .logo h2{
+    font-size: 25px;
+    color: #000;
+}
+
+.allProfile .otherside ul li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.allProfile .otherside ul li:first-child{
+    background-color: #ffd700;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.allProfile .otherside ul li ion-icon{
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.allProfile .otherside ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+}
+
+.allProfile main{
+    margin-left: 22%;
+    padding: 20px;
+}
+
+.allProfile main .edit_profile{
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 1px  rgba(0, 0, 0, 0.25);
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 3px;
+}
+
+.allProfile main .edit_profile .edit_header{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
+.allProfile main .edit_profile .edit_header ion-icon{
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+.allProfile main .edit_profile a{
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    border: 1px solid;
+    text-decoration: none;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+    width: 100px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.allProfile main .edit_profile a ion-icon{
+    font-size: 20px;
+    margin-right: 15px;
+    color: #333;
+}
+
+.allProfile main .edit_profile a p{
+    color: #333;
+}
+
+.allProfile main .edit_profile .edit_save{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.allProfile main .edit_profile .edit_save .personal_header{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
+.allProfile main .edit_profile .edit_save .personal_header ion-icon{
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.allProfile main .edit_profile .edit_save .save{
+    display: flex;
+    align-items: center;
+ }
+
+ .allProfile main .edit_profile .edit_save .save button:first-child{
+    border: none;
+    outline: none;
+    background-color: green;
+    padding: 8px;
+    border-radius: 2px;
+    color: #ccc;
+    width: 100px;
+    margin-right: 10px;
+ }
+
+ .allProfile main .edit_profile .edit_save .save button:last-child{
+    border: none;
+    outline: none;
+    background-color: red;
+    padding: 8px;
+    border-radius: 2px;
+    color: #fff;
+    width: 100px;
+    margin-right: 10px;
+ }
+
+.allProfile main .edit_profile .profileImg{
+    width: 100%;
+    padding: 30px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.allProfile main .edit_profile .profileImg ion-icon{
+    padding: 60px;
+    border: 2px solid #dddddd;
+    border-radius: 50%;
+    margin-right: 25px;
+    font-size: 50px;
+}
+
+.allProfile main .edit_profile .profileImg button{
+    border: none;
+    outline: none;
+    background-color: green;
+    padding: 8px;
+    border-radius: 2px;
+    color: #ccc;
+}
+
+.allProfile main .edit_profile form{
+  background: #fff;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.allProfile main .edit_profile form .first_input{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.allProfile main .edit_profile form .first_input input{
+    padding: 10px;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.allProfile main .edit_profile form .last_input{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.allProfile main .edit_profile form .last_input input{
+    padding: 10px;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.allProfile main .edit_profile form button{
+    border: none;
+    outline: none;
+    background-color: green;
+    padding: 8px;
+    border-radius: 2px;
+    color: #ccc;
+    width: 100px;
+}
+
+@media (max-width: 1120px){
+    .allProfile .sidebar{
+        display: none;
+    }
+
+    .allProfile .otherside{
+        display: none;
+        z-index: 5;
+        width: 30%;
+    }
+
+    .allProfile .otherside.othersideopen{
+        display: block;
+    }
+
+    .allProfile .otherside .logo{
+        justify-content: flex-end;
+    }
+
+    .allProfile .otherside .logo img, h2{
+        margin-right: auto;
+    }
+
+    .allProfile .otherside .logo ion-icon{
+        font-size: 25px;
+        color: #000;
+    }
+
+    .allProfile main{
+        margin-left: 0%;
+        margin: 10px;
+    }
+
+    .allProfile nav .profile_menu #menu{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 900px){
+    .allProfile .otherside{
+        width: 40%;
+    }
+}
+
+@media (max-width: 600px){
+    .allProfile main .edit_profile .profileImg{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid: 10px;
+    }
+
+    .allProfile .otherside{
+        width: 50%;
+    }
+
+    .allProfile main .edit_profile .profileImg ion-icon{
+        margin-bottom: 20px;
+    }
+
+    .allProfile main .edit_profile .profileImg input{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 500px){
+
+    .allProfile main .edit_profile .edit_header{
+        display: block;
+    }
+
+    .allProfile main .edit_profile .edit_save{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid: 10px;
+    }
+
+    .allProfile main .edit_profile .edit_save .save{
+        margin-bottom: 10px;
+        justify-content: space-between;
+    }
+
+    .allProfile .otherside{
+        width: 60%;
+    }
+
+}
+
+@media (max-width: 400px){
+    .allProfile .otherside{
+        width: 70%;
+    }
+}

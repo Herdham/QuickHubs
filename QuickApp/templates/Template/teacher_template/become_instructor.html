@@ -1,0 +1,236 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Become Instructor - Online Tutorial & Freelance Service Marketplace</title>
+        <link rel="stylesheet" href="{% static '/style/teacher_css/become.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@300;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sahitya:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static '/images/logo/quickfav/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static '/images/logo/quickfav/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static '/images/logo/quickfav/favicon-16x16.png' %}">
+        <link rel="manifest" href="{static '/images/logo/quickfav/site.webmanifest'}">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   </head>
+           
+   <body>
+           <div class="allmainpage">
+                <menu>
+                    <div class="menu">
+                        <div class="menu_join flex">
+                            <a href="#"><button type="button">Join</button></a>
+                            <ion-icon name="close-outline" class="menuclose"></ion-icon>
+                        </div>
+
+                        <div class="menu_categories">
+                            <ul>
+                                <li class="flex"><ion-icon name="home-outline"></ion-icon><a href="/Template/main.html">Home</a></li>
+                                <li class="flex"><ion-icon name="bag-outline"></ion-icon><a href="#">Jobs</a></li>
+                                <li class="flex"><ion-icon name="grid-outline"></ion-icon><a href="#">QuickHub Pro</a></li>
+                                <li class="flex"><ion-icon name="library-outline"></ion-icon><a href="#">Library</a></li>
+                                <li class="flex"><ion-icon name="book-outline"></ion-icon><a href="#">Ebooks</a></li>
+                                <li class="flex"><ion-icon name="build-outline"></ion-icon><a href="#">Tools</a></li>
+                                <li class="flex"><ion-icon name="log-in-outline"></ion-icon><a href="#">Sign In</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </menu>
+
+                <nav>
+                    <div class="navbar">
+                        <!-- nav first -->
+                        <ion-icon name="menu-outline" class="menu"></ion-icon>
+                        <div class="first">
+                              
+                            <a href="#" class="logo">
+                                <img src="{% static '/images/logo/quicklogo1.png'%}" alt="">
+                                <h3>QuickHub</h3>
+                            </a>
+
+                            <div class="search">
+                                <input type="text" id="searchbtn" placeholder="What class are your looking for today?">
+                                <ion-icon name="close-outline" id="cancleBtn"></ion-icon>
+                                <ion-icon name="search-outline" id="searchBtn"></ion-icon>                                 
+                            </div>
+
+                            <ul class="moreabout">
+                                <li>
+                                    <a href="#">QuickHub Pro</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </li>
+                                <li>
+                                    <a href="#">Explore</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- nav second -->
+                    <div class="second">
+                        <ul>
+                            <li class="become"><a href="/">Home</a></li>
+                            <li class="signin"><a href="/instructor_signin">Sign In</a></li>
+                        </ul>
+                        <a href="/instructor_signup" class="join">Join</a>
+                    </div>
+                    </div>
+                </nav>
+
+                <main>
+                    <div class="carousel">
+                        <div class="scrollBtn">
+                            <ion-icon name="chevron-back-outline" id="scrollback"></ion-icon>
+                            <ion-icon name="chevron-forward-outline" id="scrollforward"></ion-icon>
+                        </div>
+                        <div class="categories_inner">
+                           <div class="category_wrapper">
+                                <li class="active"><a href="#">Web Development Course</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Mobile Development</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Python Technologies</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Education Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Arabic Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Business Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Forex Trading Course</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Freelancing Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Data Engineering</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Marketing Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Software Engineering</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Software Testing</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">AI Technologies</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                           </div>
+                        </div>
+                        <ul class="carouselbody">
+                            <li id="chevron" class="active flex"><a href="#">Categories</a><ion-icon name="chevron-down-outline"></ion-icon></li>
+                            <li><a href="#">Python</a></li>
+                            <li><a href="#">C++</a></li>
+                            <li><a href="#">c#</a></li>
+                            <li><a href="#">Java</a></li>
+                            <li><a href="#">PHP</a></li>
+                            <li><a href="#">Ruby</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                            <li><a href="#">Scala</a></li>
+                            <li><a href="#">Groovy</a></li>
+                            <li><a href="#">Golang</a></li>
+                            <li><a href="#">SQL</a></li>
+                            <li><a href="#">MongoDB</a></li>
+                            <li><a href="#">Chemistry</a></li>
+                            <li><a href="#">Physics</a></li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">Math</a></li>
+                            <li><a href="#">Literature</a></li>
+                            <li><a href="#">More...</a></li>
+                        </ul>
+                    </div>
+                    
+                   <div class="instructor_wrapper">
+                        <div class="instructor_body">
+                            <div class="instructor_header">
+                                <h1>Teach <b>With Us</b></h1>
+                                <h4>Inspire a global audience with us online</h4>
+                                <h2>Work Your Way</h2>
+                                <p>You bring the skill. We'll make your earn.</p>
+                                <span>"Develop a passion for learning. If you do, you will never cease to grow. Because a great aim of education is not about knowledge but action."</span>
+                                <span>"In learning you will teach, and in teaching you will learn."</span>
+                                <a href="/instructor_signup"><button type="button">Teach Now</button></a>
+                            </div>
+                        </div>
+                        <div class="Img">
+                            <img src="{% static '/images/imagetwo.png'%}" alt="">
+                        </div>
+                   </div>
+
+                   <div class="instructor_guide">
+                        <h1>How it Works</h1>
+                        <div class="guide_info">
+                            <div class="same_info">
+                                <ion-icon name="business-outline"></ion-icon>
+                                <h3>1. Create a course</h3>
+                                <p>Sign up for free, set up your course, and offer your work to our global audience</p>
+                            </div>
+                            <div class="same_info">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <h3>2. Deliver great work</h3>
+                                <p>Get notified when you get an order and use our system to discuss details with customers</p>
+                            </div>
+                            <div class="same_info">
+                                <ion-icon name="wallet-outline"></ion-icon>
+                                <h3>3. Get paid</h3>
+                                <p>Get paid on time, every time. Payment is available for withdraw as soon as it clears.</p>
+                            </div>
+                        </div>
+                   </div>
+
+                   <div class="learning">
+                        <div class="learning_inspire">
+                            <div class="learning_header">
+                                <h1>learn</h1>
+                                <h3>One-demand profession courses, <br>led by the world's leading experts</h3>
+                                <p>Discover what it takes to be a top-notch seller on QuickHub with <br> this complimentary Learn from QuickHub course.</p>
+                                <a href="#"><button type="button">Learn More...</button></a>
+                            </div>
+                        </div>
+                        <div class="learning_image">
+                            <img src="{% static '/images/another.png'%}" alt="">
+                        </div>
+                   </div>
+                </main>
+
+                <footer>
+                    <div class="first">
+                        <a href="#" class="logo">
+                            <img src="{% static '/images/logo/quicklogo1.png'%}" alt="">
+                            <h1>QuickHub</h1>
+                        </a>
+                        <p>QuickHub is a leading Ed Tech <br> company striving to provide the best <br> learning material on technical and non-<br>technical subjects.</p>
+                    </div>
+
+                    <div class="seconds">
+                        <h1>About us</h1>
+                        <div class="secondInner">
+                            <ul>
+                                <li><a href="#"> > Company </a></li>
+                                <li><a href="#"> > Our Team </a></li>
+                                <li><a href="#"> > Careers </a></li>
+                                <li><a href="#"> > Jobs </a></li>
+                                <li><a href="#"> > Contact Us </a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#"> > Term of use </a></li>
+                                <li><a href="#"> > Privacy Policy </a></li>
+                                <li><a href="#"> > Refund Policy </a></li>
+                                <li><a href="#"> > Cookies Policy </a></li>
+                                <li><a href="#"> > FAQ's </a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="third">
+                        <div class="address">
+                            <ion-icon name="location-outline"></ion-icon>
+                            <p>QuickHub Learning Institute Limited, <br>Along H.M.A Company Abuja, Nigeria</p>
+                        </div>
+                        <div class="social">
+                            <ul>
+                                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                                <li><a href="#"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                                <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <script src="{% static '/scripts/teacher_js/become.js'%}"></script>
+    </body>
+
+</html>

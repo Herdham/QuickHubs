@@ -1,0 +1,253 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>HTML Element Tutorial</title>
+        <link rel="stylesheet" href="{% static '/style/allcourses_css/html_intro.css'%}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@300;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sahitya:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static '/images/logo/quickfav/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static '/images/logo/quickfav/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static '/images/logo/quickfav/favicon-16x16.png' %}">
+        <link rel="manifest" href="{static '/images/logo/quickfav/site.webmanifest'}">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   </head>
+           
+   <body>
+           <div class="allmainpage">
+               <menu>
+                    <div class="othersidebar">
+                        <h3>HTML Tutorial</h3>
+                        <ul>
+                            <li class="active"><a href="/html">HTML HOME</a></li>
+                            <li><a href="/html_intro">HTML Introduction</a></li>
+                            <li><a href="/html_editor">HTML Editors</a></li>
+                            <li><a href="/html_basic">HTML Basic</a></li>
+                            <li><a href="/html_ele">HTML Elements</a></li>
+                            <li><a href="/html_attr">HTML Attributes</a></li>
+                            <li><a href="/html_heading">HTML Headings</a></li>
+                            <li><a href="/html_para">HTML Paragraphs</a></li>
+                            <li><a href="/html_style">HTML Styles</a></li>
+                            <li><a href="#">HTML Formatting</a></li>
+                        </ul>
+                    </div>
+               </menu>
+
+                <nav>
+                    <div class="navbar">
+                        <!-- nav first -->
+                        <ion-icon name="menu-outline" class="menu"></ion-icon>
+                        <div class="first">
+                              
+                            <a href="/" class="logo">
+                                <img src="{% static '/images/logo/quicklogo1.png'%}" alt="">
+                                <h3>QuickHub</h3>
+                            </a>
+
+                            <div class="search">
+                                <input type="text" id="searchbtn" placeholder="What class are your looking for today?">
+                                <ion-icon name="close-outline" id="cancleBtn"></ion-icon>
+                                <ion-icon name="search-outline" id="searchBtn"></ion-icon>                                 
+                            </div>
+
+                            <ul class="moreabout">
+                                <li>
+                                    <a href="#">QuickHub Pro</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </li>
+                                <li>
+                                    <a href="#">Explore</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- nav second -->
+                        <div class="second">
+                            <ul>
+                                <li class="become"><a href="/become">Become a Teacher</a></li>
+                                <li class="signin"><a href="/signin">Sign In</a></li>
+                            </ul>
+                            <a href="/" class="join">Join</a>
+                        </div>
+                    </div>
+                </nav>
+ 
+                <div class="carousel">
+                        <div class="scrollBtn">
+                            <ion-icon name="chevron-back-outline" id="scrollback"></ion-icon>
+                            <ion-icon name="chevron-forward-outline" id="scrollforward"></ion-icon>
+                        </div>
+                        <div class="categories_inner">
+                           <div class="category_wrapper">
+                                <li class="active"><a href="#">Web Development Course</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Mobile Development</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Python Technologies</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Education Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Arabic Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Business Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Forex Trading Course</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Freelancing Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Data Engineering</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Marketing Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Software Engineering</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Software Testing</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">AI Technologies</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                           </div>
+                        </div>
+                        <ul class="carouselbody">
+                            <li id="chevron" class="active flex"><a href="#">Categories</a><ion-icon name="chevron-down-outline" id="ion"></ion-icon></li>
+                            <li><a href="{% url 'p_default' %}">Python</a></li>
+                            <li><a href="#">C++</a></li>
+                            <li><a href="#">c#</a></li>
+                            <li><a href="#">Java</a></li>
+                            <li><a href="#">PHP</a></li>
+                            <li><a href="#">Ruby</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                            <li><a href="#">Scala</a></li>
+                            <li><a href="#">Groovy</a></li>
+                            <li><a href="#">Golang</a></li>
+                            <li><a href="#">SQL</a></li>
+                            <li><a href="#">MongoDB</a></li>
+                            <li><a href="#">Chemistry</a></li>
+                            <li><a href="#">Physics</a></li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">Math</a></li>
+                            <li><a href="#">Literature</a></li>
+                            <li><a href="#">More...</a></li>
+                        </ul>
+                </div>
+
+                <main>
+                    <div class="sidebar">
+                        <h3>HTML Tutorial</h3>
+                        <ul>
+                            <li class="active"><a href="/html">HTML HOME</a></li>
+                            <li><a href="/html_intro">HTML Introduction</a></li>
+                            <li><a href="/html_editor">HTML Editors</a></li>
+                            <li><a href="/html_basic">HTML Basic</a></li>
+                            <li><a href="/html_ele">HTML Elements</a></li>
+                            <li><a href="/html_attr">HTML Attributes</a></li>
+                            <li><a href="/html_heading">HTML Headings</a></li>
+                            <li><a href="/html_para">HTML Paragraphs</a></li>
+                            <li><a href="/html_style">HTML Styles</a></li>
+                            <li><a href="#">HTML Formatting</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="maincontainer">
+                        <div class="allmain">
+                            <h1>HTML Attributes Tutorial</h1>
+                            <div class="prevNext">
+                                <a href="/html_ele">Previous</a>
+                                <a href="/html_heading">Next</a>
+                            </div>
+                            <p>HTML attributes provide additional information about HTML elements.</p><br>
+                            <p>And Always remember this <b>: HTML stand for -> Hypertext Markup Language</b>, a standardized system for tagging text files to achieve font, colour, graphic, and hyperlink effects on World Wide Web pages.</p><br>
+                            <div class="studyeditor">
+                                <h1>-> HTML Attributes</h1>
+                                <ul>
+                                    <li>All HTML elements can have attributes</li>
+                                    <li>Attributes provide additional information about elements</li>
+                                    <li>Attributes are always specified in the start tag</li>
+                                    <li>Attributes usually come in name/value pairs like: name="value"</li>
+                                </ul>
+                            </div>
+
+                            <div class="example">
+                                <h1>-> The href Attrubutes</h1>
+                                <p>The <b>(a)</b> tags in example below defines a hyperlink. The <b>href</b> attribute specifies the URL of the page the link goes to:</p><br>
+                                <div class="exampleinner">
+                                    <div class="tags"><span class="flex"><ion-icon name="chevron-back-outline"></ion-icon>a href="https://www.quickhub.com"<ion-icon name="chevron-forward-outline"></ion-icon>
+                                    </span>Visit quickhub site<span class="flex"><ion-icon name="chevron-back-outline"></ion-icon>/a<ion-icon name="chevron-forward-outline"></ion-icon></span></div>
+                                </div>
+                            </div><br>
+
+                            <div class="example">
+                                <h1>-> The class Attibute</h1>
+                                <p>-> The <b>h1</b> tags in example below can also have an attibutes like (class attribute or id attributes)<br>
+                                <p>-> The class attribute is part of the Global Attributes, and can be used on any HTML element.</p>
+                                <p>-> It also allow CSS and Javascript to select specific element</p>
+                                <p>-> ohh sorry we are going to talk more about css and javascript in the later chapter and if you want to learn more about css and javascript course check our css and javascript course.</p>
+                                <p>-> You are going to learn more about class and id attributes in the later chapter</p><br>
+                                <div class="exampleinner">
+                                    <div class="tags"><span class="flex"><ion-icon name="chevron-back-outline"></ion-icon>h1 class="myheading"<ion-icon name="chevron-forward-outline"></ion-icon>
+                                    </span>Heading 1<span class="flex"><ion-icon name="chevron-back-outline"></ion-icon>/h1<ion-icon name="chevron-forward-outline"></ion-icon></span></div>
+                                </div>
+                            </div><br>
+                            
+                             <!-- Optional -->
+                            <div class="optional">
+                                <h1>Optional Features</h1>
+                                <p>Log in to your account, and start earning points!</p>
+                                <p>With this optional Features you can study at QuickHub without any paid.</p>
+                            </div>
+
+                            <div class="prevNext">
+                                <a href="/html_ele">Previous</a>
+                                <a href="/html_heading">Next</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer>
+                        <div class="first">
+                            <a href="/" class="logo">
+                                <img src="{% static '/images/logo/quicklogo1.png'%}" alt="">
+                                <h1>QuickHub</h1>
+                            </a>
+                            <p>QuickHub is a leading Ed Tech <br> company striving to provide the best <br> learning material on technical and non-<br>technical subjects.</p>
+                        </div>
+    
+                        <div class="seconds">
+                            <h1>About us</h1>
+                            <div class="secondInner">
+                                <ul>
+                                    <li><a href="#"> > Company </a></li>
+                                    <li><a href="#"> > Our Team </a></li>
+                                    <li><a href="#"> > Careers </a></li>
+                                    <li><a href="#"> > Jobs </a></li>
+                                    <li><a href="#"> > Contact Us </a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#"> > Term of use </a></li>
+                                    <li><a href="#"> > Privacy Policy </a></li>
+                                    <li><a href="#"> > Refund Policy </a></li>
+                                    <li><a href="#"> > Cookies Policy </a></li>
+                                    <li><a href="#"> > FAQ's </a></li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <div class="third">
+                            <div class="address">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <p>QuickHub Learning Institute Limited, <br>Along H.M.A Company Abuja, Nigeria</p>
+                            </div>
+                            <div class="social">
+                                <ul>
+                                    <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                                    <li><a href="#"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                                    <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                                    <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </footer>
+                </main>
+
+           </div>
+    
+           <script src="{% static '/scripts/all_courses_js/html_intro.js'%}"></script>
+   </body>
+</html>
