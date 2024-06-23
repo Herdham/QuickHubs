@@ -10,19 +10,19 @@ check.addEventListener('click', () => {
 
 
 //For last name
-const last = document.querySelector("#last");
-last.addEventListener('keyup', () => {
-    if (last.value.length == 0) {
+const fullname = document.querySelector("#last");
+fullname.addEventListener('keyup', () => {
+    if (fullname.value.length == 0) {
         error.style.display = "block"
-        error.innerHTML = "Last name require"
+        error.innerHTML = "Name require"
         return false;
     }
-    else if(last.value.length < 4){
+    else if(fullname.value.length < 4){
         error.style.display = "block"
-        error.innerHTML = "Last must be at least 4 character"
+        error.innerHTML = "Name must be at least 4 character"
         return false;
     }
-    else if(!last.value.match(/^[A-Z][a-z]+$/)){
+    else if(!fullname.value.match(/^[A-z][a-z]+[\s][A-Z][a-z]+$/)){
         error.style.display = "block"
         error.innerHTML = "Name must start with capital letter and only character required"
         return false;
@@ -91,12 +91,7 @@ password.addEventListener('keyup', () => {
 })
 
 function validate(){
-    if(first.value.length == 0){
-        error.style.display = "block"
-        error.innerHTML = "First name required"
-        return false;
-    }
-    else if(last.value.length == 0){
+    if(fullname.value.length == 0){
         error.style.display = "block"
         error.innerHTML = "Last name required"
         return false;

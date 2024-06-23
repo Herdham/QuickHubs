@@ -203,7 +203,7 @@
 
 .allmain main{
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -301,8 +301,8 @@
 }
 
 .allmain main .mainformpage form .terms input{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin-right: 20px;
     border: none;
     outline: none;
@@ -331,7 +331,7 @@
 }
 
 .allmain main .mainformpage form .instead{
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .allmain main .mainformpage form .instead a{
