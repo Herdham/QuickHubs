@@ -211,6 +211,7 @@
 .allmain main .sucess{
     text-align: center;
     padding: 5px;
+    margin-top: 50px;
 }
 
 .allmain main .mainformpage{
@@ -326,7 +327,11 @@
     margin-bottom: 8px;
 }
 
-.allmain main .mainformpage form p a{
+.allmain main .mainformpage form .instead{
+    font-size: 18px;
+}
+
+.allmain main .mainformpage form .instead a{
     text-decoration: none;
 }
 

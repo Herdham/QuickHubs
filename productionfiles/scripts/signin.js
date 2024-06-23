@@ -2,9 +2,9 @@ const check = document.querySelector(".check #checkpass");
 const pass1 = document.querySelector("#pass");
 check.addEventListener('click', () => {
     if (check.checked == true) {
-        pass1.type = "text"
+        pass.type = "text"
     }else{
-        pass1.type = "password"
+        pass.type = "password"
     }
 })
 
