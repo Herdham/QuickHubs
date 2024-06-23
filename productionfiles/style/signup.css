@@ -278,14 +278,27 @@
 .allmain main .mainformpage form .check{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
-.allmain main .mainformpage form .check input{
+.allmain main .mainformpage form .check .checkpass{
+    display: flex;
+    align-items: center;
+}
+
+.allmain main .mainformpage form .check .checkpass input{
     width: 25px;
     height: 25px;
     margin-right: 20px;
     border: none;
     outline: none;
+}
+
+.allmain main .mainformpage form .check a{
+    text-decoration: none;
+    color: #000000;
 }
 
 .allmain main .mainformpage form select{

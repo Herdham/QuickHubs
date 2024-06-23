@@ -395,6 +395,11 @@
 }
 
 @media (max-width: 500px){
+    .allProfile main{
+        margin-left: 0%;
+        margin: 5px;
+    }
+
     .allProfile main .student_dashboard .students_course_details{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
