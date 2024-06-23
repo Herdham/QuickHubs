@@ -29,6 +29,7 @@ urlpatterns = [
     path('type/', views.h_type, name='type'),
     path('method/', views.h_method, name='method'),
     path('effect/', views.h_effect, name='effect'),
+    path('point/', views.h_point, name='point'),
 
     path('p_default/', views.p_default, name='p_default'),
     path('p_intro/', views.p_intro, name='p_intro'),

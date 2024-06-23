@@ -133,6 +133,10 @@ def h_effect(request):
     template = loader.get_template('Template/allcourses/arabic_course/hijamah/effect.html')
     return HttpResponse(template.render())
 
+def h_point(request):
+    template = loader.get_template('Template/allcourses/arabic_course/hijamah/hijamah_point.html')
+    return HttpResponse(template.render())
+
 #for python course
 def p_default(request):
     return render(request, 'Template/allcourses/language/python/default.html')

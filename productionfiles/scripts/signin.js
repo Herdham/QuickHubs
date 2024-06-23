@@ -1,10 +1,10 @@
-let check = document.querySelector(".check #checkpass");
-let password = document.querySelector("#pass");
+const check = document.querySelector(".check #checkpass");
+const pass1 = document.querySelector("#pass");
 check.addEventListener('click', () => {
     if (check.checked == true) {
-        password.type = "text"
+        pass1.type = "text"
     }else{
-        password.type = "password"
+        pass1.type = "password"
     }
 })
 
