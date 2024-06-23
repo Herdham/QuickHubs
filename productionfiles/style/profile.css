@@ -404,6 +404,10 @@
         display: block;
     }
 
+    .allProfile main .student_dashboard .student_header h2{
+        white-space: normal;
+    }
+
     .allProfile main .purchase_courses .purchase_header{
         display: block;
     }

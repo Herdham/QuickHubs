@@ -22,7 +22,7 @@ fullname.addEventListener('keyup', () => {
         error.innerHTML = "Name must be at least 4 character"
         return false;
     }
-    else if(!fullname.value.match(/^[A-z][a-z]+\s{1}[A-Z][a-z]+\s{1}[A-Za-z]*$/)){
+    else if(!fullname.value.match(/^[A-z][a-z]+\s{1}[A-Z][a-z]*$/)){
         error.style.display = "block"
         error.innerHTML = "Name must start with capital letter and only character required"
         return false;
