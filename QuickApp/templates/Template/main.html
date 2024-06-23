@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>QuickHub - Online Tutorial & Freelance Service Marketplace</title>
+        <title>QuickHub - Online Tutorial | Video Courses | Ebooks | Freelance Service Marketplace</title>
         <link rel="stylesheet" href="{% static 'style/main.css' %}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,6 +43,7 @@
                     </div>
                 </menu>
 
+                <!-- Navbar -->
                 <nav>
                     <div class="navbar">
                         <!-- nav first -->
@@ -62,7 +63,7 @@
 
                             <ul class="moreabout">
                                 <li>
-                                    <a href="#">QuickHubs Pro</a>
+                                    <a href="#">QuickHub Pro</a>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                     </svg>
@@ -77,16 +78,19 @@
                         </div>
 
                         <!-- nav second -->
-                    <div class="second">
+                        <div class="second">
                         <ul>
                             <li class="become"><a href="{% url 'become' %}">Become a Teacher</a></li>
                             <li class="signin"><a href="{% url 'signin' %}">Sign In</a></li>
                         </ul>
-                        <a href="{% url 'signup' %}" class="join">Join</a>
-                    </div>
+                        <ion-icon name="search-outline" id="OtherSearchBtn"></ion-icon>
+                        <a href="{% url 'signup' %}" class="join">Joins</a>
+                        </div>
                     </div>
                 </nav>
+                
 
+                <!--Main container-->
                 <main>
                     
                     <div class="carousel">
@@ -97,6 +101,7 @@
                         <div class="categories_inner">
                            <div class="category_wrapper">
                                 <li class="active"><a href="#">Web Development Course</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="#">Programmings language</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
                                 <li><a href="#">Mobile Development</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
                                 <li><a href="#">Python Technologies</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
                                 <li><a href="#">Education Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
@@ -114,7 +119,7 @@
                         <ul class="carouselbody">
                             <li id="chevron" class="active flex"><a href="#">Categories</a><ion-icon name="chevron-down-outline" id="ion"></ion-icon></li>
                             <li><a href="{% url 'p_default' %}">Python</a></li>
-                            <li><a href="html/">HTMLs</a></li>
+                            <li><a href="html/">HTML</a></li>
                             <li><a href="#">JavaScript</a></li>
                             <li><a href="#">C++</a></li>
                             <li><a href="#">c#</a></li>
@@ -135,11 +140,7 @@
                             <li><a href="#">More...</a></li>
                         </ul>
                     </div>
-                    <div class="search_box">
-                        <input type="text" id="searchbar" autocomplete="off" placeholder="Search for any services....">
-                        <ion-icon name="close-outline" id="cancle_btn"></ion-icon>
-                        <ion-icon name="search-outline" id="search_btn"></ion-icon>
-                    </div>
+
                     <div class="maincontainer">
                         <div class="mainwrapper">
                             <div class="mainheading">
