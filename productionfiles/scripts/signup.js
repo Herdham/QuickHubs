@@ -8,31 +8,8 @@ check.addEventListener('click', () => {
     }
 })
 
-//For first name
-const error = document.querySelector("#error");
-const first = document.querySelector("#first");
-first.addEventListener('keyup', () => {
-    if (first.value.length == 0) {
-        error.style.display = "block"
-        error.innerHTML = "First name require"
-        return false;
-    }
-    else if(first.value.length < 4){
-        error.style.display = "block"
-        error.innerHTML = "First must be at least 4 character"
-        return false;
-    }
-    else if(!first.value.match(/^[A-Z][a-z]+$/)){
-        error.style.display = "block"
-        error.innerHTML = "Name must start with capital letter and only character required"
-        return false;
-    }
-    error.style.display = "none"
-})
-
 
 //For last name
-
 const last = document.querySelector("#last");
 last.addEventListener('keyup', () => {
     if (last.value.length == 0) {
