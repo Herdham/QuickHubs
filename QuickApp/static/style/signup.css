@@ -261,7 +261,7 @@
     display: none;
 }
 
-.allmain main .mainformpage form input{
+.allmain main .mainformpage form input[type="text"]{
     width: 100%;
     border: none;
     outline: none;
@@ -271,34 +271,39 @@
     margin-bottom: 8px;
 }
 
-.allmain main .mainformpage form input:first-child{
-    outline: 1px solid #000000;
-}
-
-.allmain main .mainformpage form .check{
+.allmain main .mainformpage form .password{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 2px;
 }
 
-.allmain main .mainformpage form .check .checkpass{
-    display: flex;
-    align-items: center;
-}
-
-.allmain main .mainformpage form .check .checkpass input{
-    width: 25px;
-    height: 25px;
-    margin-right: 20px;
-    border: none;
+.allmain main .mainformpage form .password input[type="password"]{
+    border: 1px solid #fff;
     outline: none;
+    padding: 10px;
+    width: 100%;
+    margin-right: 15px;
 }
 
-.allmain main .mainformpage form .check a{
-    text-decoration: none;
-    color: #000000;
+
+
+.allmain main .mainformpage form .password ion-icon{
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.allmain main .mainformpage form .forget{
+    text-align: center;
+    padding: 8px;
+}
+
+
+.allmain main .mainformpage form input:first-child{
+    outline: 1px solid #000000;
 }
 
 .allmain main .mainformpage form select{

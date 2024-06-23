@@ -57,13 +57,12 @@
                         {% csrf_token %}
                         <div id="error"></div>
                         <input type="text" placeholder="Username" name="username" id="user"  autocomplete="off">
-                        <input type="password" placeholder="Password" name="pass" id="pass"  autocomplete="off">
-                        <div class="check flex">
-                            <div class="checkpass">
-                                <input type="checkbox" name="checkbox" id="checkpass">
-                                <p>Check Password?</p>
-                            </div>
-                            <a href="#">Forget password?</a>
+                        <div class="password">
+                            <input type="password" placeholder="Password" name="pass" id="pass"  autocomplete="off">
+                            <ion-icon name="eye-off-outline"></ion-icon>
+                        </div>
+                        <div class="forget">
+                            <a href="#" style="text-decoration: none; color: black;">Forget password?</a>
                         </div>
                        <button type="submit" id="submitBtn">Signin</button>
                        <p>__________or__________</p>
