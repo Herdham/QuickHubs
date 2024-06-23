@@ -96,7 +96,7 @@ function validate(){
         error.innerHTML = "Last name required"
         return false;
     }
-    else if(!fullname.value.match(/^[A-z][a-z]+\s{1}[A-Z][a-z]+\s{1}[A-Za-z]*$/)){
+    else if(!fullname.value.match(/^[A-z][a-z]+\s{1}[A-Z][a-z]+[A-Za-z]*$/)){
         error.style.display = "block"
         error.innerHTML = ""
         return false;
