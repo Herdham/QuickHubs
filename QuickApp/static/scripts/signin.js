@@ -1,13 +1,3 @@
-const check = document.querySelector(".check #checkpass");
-const pass1 = document.querySelector("#pass");
-check.addEventListener('click', () => {
-    if (check.checked == true) {
-        pass.type = "text"
-    }else{
-        pass.type = "password"
-    }
-})
-
 const error = document.querySelector("#error")
 const user = document.querySelector("#user")
 user.addEventListener('keyup', () => {
