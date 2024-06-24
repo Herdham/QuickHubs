@@ -1,15 +1,5 @@
-let check = document.querySelector(".check #checkpass");
-let pass = document.querySelector("#pass");
-check.addEventListener('click', () => {
-    if (check.checked == true) {
-        pass.type = "text"
-    }else{
-        pass.type = "password"
-    }
-})
 
-
-//For last name
+//For fullname name
 const fullname = document.querySelector("#last");
 fullname.addEventListener('keyup', () => {
     if (fullname.value.length == 0) {
