@@ -88,7 +88,7 @@ DATABASES = {
         'NAME': 'quickhub',
         'USER': 'postgres',
         'PASSWORD': 'Herdham001@',
-        'PORT': '5432',
+        'PORT': '543',
         'HOST': 'localhost',
     }
 }
