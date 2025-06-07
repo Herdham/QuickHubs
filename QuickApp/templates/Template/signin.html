@@ -46,7 +46,7 @@
             <main>
                 <h2 class="sucess">Sucess start here</h2>
                 <div class="mainformpage">
-                    <div style="background-color: #ddd; color: red; text-align: center;">
+                    <div id="error_msg">
                         {% for message in messages %}
                              <div id="errors">{{ message }}</div>
                         {% endfor %}
@@ -57,9 +57,9 @@
                         {% csrf_token %}
                         <div id="error"></div>
                         <input type="text" placeholder="Username" name="username" id="user"  autocomplete="off">
-                        <div class="password">
+                        <div class="password1">
                             <input type="password" placeholder="Password" name="pass" id="pass"  autocomplete="off">
-                            <ion-icon name="eye-off-outline"></ion-icon>
+                            <ion-icon name="eye-off-outline" id="passcheck"></ion-icon>
                         </div>
                         <div class="forget">
                             <a href="#" style="text-decoration: none; color: black;">Forget password?</a>

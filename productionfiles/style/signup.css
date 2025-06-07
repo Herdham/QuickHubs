@@ -223,6 +223,17 @@
     border-radius: 5px;
 }
 
+.allmain main .mainformpage #errors{
+    color: red;
+    font-size: 13px;
+    padding: 8px;
+    border: 1px solid red;
+    background-color: #ccc;
+    margin-bottom: 6px;
+    border-radius: 2px;
+    text-align: center;
+}
+
 
 .allmain main .mainformpage h2{
     text-align: center;
@@ -239,18 +250,8 @@
     padding: 10px;
 }
 
-.allmain main .mainformpage form #error{
-    color: red;
-    font-size: 13px;
-    padding: 8px;
-    border: 1px solid red;
-    background-color: #ccc;
-    margin-bottom: 6px;
-    border-radius: 2px;
-    display: none;
-}
 
-.allmain main .mainformpage form #errors{
+.allmain main .mainformpage form #error{
     color: red;
     font-size: 13px;
     padding: 10px;
@@ -271,7 +272,34 @@
     margin-bottom: 8px;
 }
 
-.allmain main .mainformpage form .password{
+.allmain main .mainformpage form .password1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 2px;
+    margin-bottom: 8px;
+}
+
+.allmain main .mainformpage form .password1 input[type="password"]{
+    border: 1px solid #fff;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    margin-right: 15px;
+    border: none;
+    outline: none;
+}
+
+.allmain main .mainformpage form .password1 ion-icon{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.allmain main .mainformpage form .password2{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -281,17 +309,19 @@
     border-radius: 2px;
 }
 
-.allmain main .mainformpage form .password input[type="password"]{
+.allmain main .mainformpage form .password2 input[type="password"]{
     border: 1px solid #fff;
     outline: none;
     padding: 10px;
     width: 100%;
-    margin-right: 15px;
+    border: none;
+    outline: none;
 }
 
 
 
-.allmain main .mainformpage form .password ion-icon{
+.allmain main .mainformpage form .password2 ion-icon{
+    margin-left: 10px;
     margin-right: 10px;
     font-size: 25px;
 }

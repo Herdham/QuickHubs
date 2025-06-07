@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect
 from django.template import loader
-from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import HttpResponse
+from django.contrib.auth.models import User
 # Create your views here.
 
 #for main page
@@ -15,30 +15,38 @@ def main(request):
 #for signup page
 def signup(request):
     if request.method == 'POST':
-        first = request.POST['first']
-        uname = request.POST['user']
-        email = request.POST['email']
-        password = request.POST['pass']
-        if len(password) < 6:
-            messages.info(request, 'Password must be atleast 6 character')
-        elif User.objects.filter(email=email).exists():
-            messages.info(request, 'Email has been taken')
+        User = get_user_model()
+        username = request.POST.get("user")
+        email = request.POST.get("email")
+        password = request.POST.get("pass")
+        cpassword = request.POST.get("cpass")
+
+        if password != cpassword:
+            messages.info(request, "Password Not Matched")
+            return redirect('/signup')
         else:
-            my_user = User.objects.create_user(uname, email, password, first)
-            my_user.save()
-            return redirect('signin')
-    
-    return render(request, 'Template/signup.html')
+            if User.objects.filter(email=email).exists():
+                messages.info(request, "Email already exist")
+                return redirect('/signup')
+            elif User.objects.filter(username=username).exists():
+                messages.info(request, "Username already exit")
+                return redirect('/signup')
+            else:
+                user = User.objects.create_user(username=username, email=email, password=password)
+                user.save()
+                return redirect('/signin')
+    else:
+        return render(request, 'Template/signup.html')
 
 #for signin page
 def signin(request):
     if request.method == 'POST':
-        username = request.POST['username']
-        pass1 = request.POST['pass']
-        user = authenticate(request, username=username, password=pass1)
+        username = request.POST.get("username")
+        password = request.POST.get("pass")
+        user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('profile')
+            return redirect('/profile')
         else:
             messages.info(request, 'Username is or password is incorrect')
 
@@ -47,7 +55,8 @@ def signin(request):
 #for student_profile
 @login_required(login_url='signin')
 def profile(request):
-    username = User.objects.all().values()
+    User = get_user_model()
+    username = User.objects.all()
     context = {'username': username}
     return render(request, 'Template/profile.html', context)
 
