@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-p!9(#c=m0tqc--254&qn2d3*z$w*ok4vat#lj5drk-2o$j4apv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['quickhub.onrender.com', 'localhost', '127.0.0.1']
 
 #127.0.0.1localhostquickhubs.onrender.com
 
