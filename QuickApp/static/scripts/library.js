@@ -100,38 +100,6 @@ jQuery(function () {
 })
 
 
-//Second Search Design
-const search_box = document.querySelector(".search_box #searchbar");
-const cancleBtn = document.querySelector(".search_box #cancle_btn");
-
-search_box.addEventListener('keyup', function(e){
-    if (search_box.value == '') {
-        cancleBtn.style.display = 'none'
-    }
-    else{
-        cancleBtn.style.display = 'block'
-    }
-})
-cancleBtn.addEventListener('click', () => {
-    search_box.value = ""
-    cancleBtn.style.display = 'none'
-})
-
-
-const backward = document.querySelector('#backwardBtn');
-const forward = document.querySelector('#forwardBtn');
-const popular = document.querySelector('.popularCourses');
-const popularlist = document.querySelectorAll('.popularCourses ul li');
-backward.addEventListener('click', () => {
-    popular.scrollLeft += 100;
-    popularlist.forEach((item, ind) => {
-        item.style.transition = '2s ease'
-    })
-})
-forward.addEventListener('click', () => {
-    popular.scrollLeft -= 100;
-})
-
 jQuery(() => {
     var scrollback = document.querySelector("#scrollback");
     var scrollforward = document.querySelector("#scrollforward");

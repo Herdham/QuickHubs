@@ -12,6 +12,9 @@ def main(request):
     template = loader.get_template('Template/main.html')
     return HttpResponse(template.render())
 
+def library(request):
+    return render(request, 'Template/library.html')
+
 #for signup page
 def signup(request):
     if request.method == 'POST':

@@ -23,7 +23,6 @@
     justify-content: space-between;
     padding: 5px;
     background-color: #fff;
-    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
     padding-left: 15px;
     padding-right: 15px;
     position: fixed;
@@ -63,43 +62,58 @@
 }
 
 .allmainpage nav .navbar .first .search{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: #fff;
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
     border-radius: 2px;
-    margin-right: 15px;
     flex-basis: 50%;
+    margin-right: 10px;
 }
+
+.allmainpage nav .navbar .first .search form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.allmainpage nav .navbar .first .search #cancleBtn{
+    padding: 8px;
+    background-color: #dddddd;
+    border-radius: 50px;
+    font-size: 20px;
+    display: none;
+    margin-right: 10px;
+}
+
+.allmainpage nav .navbar .first .search .searchbtn{
+    display: flex;
+    align-items: center;
+}
+
+.allmainpage nav .navbar .first .search .searchbtn label #searchBtn{
+    padding: 8px;
+    background-color: #008080;
+    color: #fff;
+    font-size: 17px;
+    margin-top: 5px;
+    margin-right: 5px;
+    border-radius: 50px;
+}
+
+.allmainpage nav .navbar .first .search .searchbtn input{
+    display: none;
+}
+
 
 .allmainpage nav .navbar .first .search input{
     border: none;
     outline: none;
-    padding: 10px;
+    padding: 8px;
     font-family: 'Poppins', sans-serif;
     background-color: transparent;
+    width: 100%;
     flex-grow: 1;
 }
 
-.allmainpage nav .navbar .first .search #searchBtn{
-    font-size: 20px;
-    background: var(--thirdcolor);
-    padding: 10px;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
-    cursor: pointer;
-}
-
-.allmainpage nav .navbar .first .search #cancleBtn{
-    font-size: 22px;
-    font-weight: 900;
-    margin-right: 8px;
-    padding: 5px;
-    background-color: #ccc;
-    border-radius: 50%;
-    display: none;
-}
 
 .allmainpage nav .navbar .first ul{
     display: flex;
@@ -167,7 +181,7 @@
 .allmainpage nav .navbar .second .join{
     padding: 8px;
     border-radius: 2px;
-    border: 1px solid var(--firstcolor);
+    border: 1px solid #008080;
     white-space: nowrap;
     text-decoration: none;
     width: 100px;
@@ -398,7 +412,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 8px;
-    background-color: #fff;
+    background-color: #008080;
     width: 100%;
     z-index: 8;
     position: fixed;
@@ -414,7 +428,8 @@
 .allmainpage main .carousel .scrollBtn ion-icon{
     position: absolute;
     padding: 10px;
-    background-color: #ccc;
+    background-color: #ffffff;
+    color: #212529;
     border-radius: 50px;
 }
 
@@ -438,10 +453,15 @@
 
 .allmainpage main .carousel ul li:first-child{
     margin-left: 45px;
-    background-color: #ffd700;
+    background-color: #008080;
     padding: 7px;
     border-radius: 2px;
     cursor: pointer;
+    color: #ffffff;
+}
+
+.allmainpage main .carousel ul li:first-child a{
+    color: #ffffff;
 }
 
 .allmainpage main .carousel ul li:last-child{
@@ -456,7 +476,7 @@
 
 .allmainpage main .carousel ul li a{
     text-decoration: none;
-    color: #000;
+    color: #ffffff;
     white-space: nowrap;
 }
 
@@ -534,7 +554,7 @@
 .allmainpage main .maincontainer .mainheading h1 b{
     font-style: oblique;
     font-family: 'Times New Roman', Times, serif;
-    color: green;
+    color: #008080;
 }
 
 .allmainpage main .maincontainer .mainheading .search_box{
@@ -592,18 +612,14 @@
 .allmainpage main .maincontainer .mainheading .populars ul li{
     list-style: none;
     margin-right: 12px;
-    background-color: #ffd700;
+    background-color: #008080;
     padding: 8px;
     border-radius: 2px;
 }
 
-.allmainpage main .maincontainer .mainheading .populars ul li:hover{
-    background-color: #dddddd;
-}
-
 .allmainpage main .maincontainer .mainheading .populars ul li a{
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     font-weight: 400;
     white-space: nowrap;
 }
@@ -636,9 +652,10 @@
 
 .allmainpage main .popular .scroll ion-icon{
     font-size: 25px;
-    background-color: #dddddd;
+    background-color: #008080;
     padding: 10px;
     border-radius: 50%;
+    color: #ffffff;
 }
 
 .allmainpage main .popular .popularCourses{
@@ -707,7 +724,7 @@
     outline: none;
     border: none;
     padding: 6px;
-    background-color: green;
+    background-color: #008080;
     border-radius: 2px;
     font-size: 18px;
     color: #fff;
@@ -756,7 +773,7 @@
 }
 
 .allmainpage main .viewCourses .viewContainer .viewWrapper:nth-last-of-type(4){
-    background-color: green;
+    background-color: #008080;
     color: #dddddd;
 }
 
@@ -769,7 +786,7 @@
 }
 
 .allmainpage main .viewCourses .viewContainer .viewWrapper:nth-last-of-type(5){
-    background-color: green;
+    background-color: #008080;
     color: #dddddd;
 }
 
@@ -787,7 +804,7 @@
 }
 
 .allmainpage main .tutoriallab h1 b{
-    color: green;
+    color: #008080;
     border-radius: 2px;
     margin-bottom: 10px;
 }
@@ -825,7 +842,7 @@
 .allmainpage main .tutoriallab .tutorialwrapper .tutorialcontainer .tutorheading button{
     outline: none;
     border: none;
-    background-color: green;
+    background-color: #008080;
     padding: 8px;
     border-radius: 2px;
 }
@@ -887,7 +904,7 @@
     border: none;
     padding: 10px;
     white-space: nowrap;
-    background-color: green;
+    background-color: #008080;
     color: #fff;
     border-radius: 2px;
     font-size: 14px;
@@ -963,7 +980,7 @@
 }
 
 .allmainpage main .membership .certification{
-    background-color: rgb(223, 162, 144);
+    background-color: #ff7f50;
     border-radius: 5px;
     display: flex;
     align-self: center;
@@ -999,7 +1016,7 @@
     border: none;
     border-radius: 2px;
     outline: none;
-    background-color: rgb(236, 89, 44);
+    background-color: #ff7f50;
     padding: 10px;
     color: #fff;
     font-size: 16px;
