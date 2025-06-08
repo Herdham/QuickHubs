@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect
 from django.template import loader
 from django.contrib.auth import authenticate, login, logout, get_user_model
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages
 from django.http import HttpResponse
 from django.contrib.auth.models import User
+from .models import LibraryCourse
 # Create your views here.
 
 #for main page
@@ -12,8 +13,28 @@ def main(request):
     template = loader.get_template('Template/main.html')
     return HttpResponse(template.render())
 
+#for library
 def library(request):
-    return render(request, 'Template/library.html')
+    library = LibraryCourse.objects.all()
+    return render(request, 'Template/library.html', {'library': library})
+
+#for libraryupload
+@login_required(login_url='/signin')
+@user_passes_test(lambda user: user.is_superuser)
+def library_upload(request):
+    librarychoices = LibraryCourse.CoursesChoices
+    if request.method == "POST":
+        course_name = request.POST.get("name")
+        course_link = request.POST.get("link")
+        course_choices = request.POST.get("choices")
+        if not course_link.startswith('/'):
+            messages.info(request, "Invalid Link")
+            return redirect('/l_upload')
+        else:
+            LibraryCourse.objects.create(course_name=course_name, course_link=course_link, course_choices=course_choices)
+            return redirect('/l_upload')
+    else:
+        return render(request, 'Template/l_upload.html', {'librarychoices': librarychoices})
 
 #for signup page
 def signup(request):

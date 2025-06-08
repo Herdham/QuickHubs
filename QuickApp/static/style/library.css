@@ -417,6 +417,7 @@
     z-index: 8;
     position: fixed;
     top: 49px;
+    margin-bottom: 10px;
 }
 
 .allmainpage main .carousel .scrollBtn{
@@ -561,6 +562,68 @@
     padding: 10px;
     color: #dddddd;
     font-family: 'Poppins', sans-serif;
+}
+
+.allmainpage main .library .all_library{
+    margin-left: 2%;
+    margin-right: 2%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.allmainpage main .library .all_library .courses{
+    background-color: #ffffff;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.40);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.allmainpage main .library .all_library .courses .courses_heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.allmainpage main .library .all_library .courses .courses_heading .start {
+    text-decoration: none;
+    background-color: #ffd700;
+    padding: 8px;
+    width: 80px;
+    color: #000;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.allmainpage main .library .all_library .courses .courses_heading .coursename a{
+    text-decoration: none;
+    color: #008080;
+}
+
+.allmainpage main .library .all_library .courses .choice{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.allmainpage main .library .all_library .courses .choice a:nth-last-of-type(1){
+    text-decoration: none;
+    background-color: #008080;
+    padding: 8px;
+    color: #fff;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.allmainpage main .library .all_library .courses .choice a:nth-last-of-type(2){
+    text-decoration: none;
+    background-color: #dddddd;
+    padding: 8px;
+    color: #000;
+    text-align: center;
+    border-radius: 25px;
 }
 
 .allmainpage main .membership{
@@ -962,39 +1025,9 @@
         white-space: normal;
     }
 
-    .allmainpage main .maincontainer .mainheading h1{
-        font-size: 30px;
-    }
-
-    .allmainpage main .maincontainer .mainheading p{
-        white-space: wrap;
-    }
-
-    .allmainpage main .maincontainer .mainheading p:nth-of-type(2){
-        display: none;
-    }
-
-    .allmainpage main .viewCourses .viewheading h1{
-        font-size: 20px;
-    }
-
-    .allmainpage main .tutoriallab .tutorialwrapper{
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    }
-
-    .allmainpage main .tutoriallab .tutorialwrapper .tutorialcontainer .tutorcourse{
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-        grid-gap: 25px;
-    }
-
-    .allmainpage main .tutoriallab .tutorialwrapper .tutorialcontainer .tutorcourse .tutorinner img{
-        width: 40px;
-        height: 40px;
-    }
-
-    .allmainpage main .tutoriallab .tutorialwrapper .tutorialcontainer .tutorcourse a:nth-of-type(6){
-        display: none;
+    .allmainpage main .library .heading h1{
+        font-size: 25px;
+        margin-top: 10px;
     }
 
     .allmainpage main .membership{
@@ -1152,4 +1185,15 @@
     .allmainpage footer .third .social ul li a ion-icon{
         font-size: 20px;
     }
+}
+
+
+@media (max-width: 350px){
+    .allmainpage main .library .all_library .courses .choice{
+        flex-direction: column;
+    }
+
+        .allmainpage main .library .all_library .courses .choice a:nth-of-type(1){
+            margin-bottom: 10px;
+        }
 }

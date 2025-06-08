@@ -28,6 +28,9 @@
                </a>
                <ul>
                     <li><ion-icon name="home-outline"></ion-icon><a href="#">Dashboard</a></li>
+                    {% if user.is_superuser %}
+                         <li><ion-icon name="home-outline"></ion-icon><a href="{% url 'l_upload' %}">Upload</a></li>
+                    {% endif %}
                     <li><ion-icon name="school-outline"></ion-icon><a href="#">Certifications</a></li>
                     <li><ion-icon name="videocam-outline"></ion-icon><a href="#">Courses</a></li>
                     <li><ion-icon name="book-outline"></ion-icon><a href="#">eBooks</a></li>

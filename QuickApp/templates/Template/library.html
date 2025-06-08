@@ -156,6 +156,21 @@
                                 <input type="submit" value="Search">
                             </form>
                         </div>
+
+                        <div class="all_library">
+                            {% for library in library %}
+                                <div class="courses">
+                                    <div class="courses_heading">
+                                        <h4 class="coursename"><a href="{{library.course_link}}">{{library.course_name}}</a></h4>
+                                        <a class="start" href="{{library.course_link}}">Start</a>
+                                    </div>
+                                    <div class="choice">
+                                        <a href="#">{{library.reference}}</a>
+                                        <a href="#">Certification</a>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
                     </div>
 
                     <div class="membership">
