@@ -83,8 +83,8 @@ jQuery(function () {
     })
 
     //First Search Design
-    const search = document.querySelector(".search #searchbtn")
-    const cancleBtns = document.querySelector(".search #cancleBtn")
+    const search = document.querySelector("#searchbar")
+    const cancleBtns = document.querySelector("#cancleBtn")
     search.addEventListener('keyup', (e) => {
         if(search.value == ''){
             cancleBtns.style.display = 'none'
@@ -92,6 +92,10 @@ jQuery(function () {
         else{
             cancleBtns.style.display = 'block'
         }
+    })
+    cancleBtns.addEventListener('click', () => {
+        search.value = ""
+        cancleBtns.style.display = 'none'
     })
 })
 
