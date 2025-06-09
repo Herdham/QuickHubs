@@ -44,27 +44,23 @@
             </nav>
 
             <main>
-                <h2 class="sucess">Sucess start here</h2>
                 <div class="mainformpage">
                     <div id="error_msg">
                         {% for message in messages %}
                              <div id="errors">{{ message }}</div>
                         {% endfor %}
                     </div>
-                    <h2>Login</h2>
+                    <h2>Password Reset</h2>
                     <p>Enter your details</p>
                     <form method="POST" onsubmit="return validate()">
                         {% csrf_token %}
                         <div id="error"></div>
-                        <input type="text" placeholder="Username" name="username" id="user"  autocomplete="off">
+                        <input type="text" placeholder="Enter your email address" name="email" id="email"  autocomplete="off">
                         <div class="password1">
                             <input type="password" placeholder="Password" name="pass" id="pass"  autocomplete="off">
                             <ion-icon name="eye-off-outline" id="passcheck"></ion-icon>
                         </div>
-                        <div class="forget">
-                            <a href="{% url 'forget' %}" style="text-decoration: none; color: black;">Forget password?</a>
-                        </div>
-                       <button type="submit" id="submitBtn">Signin</button>
+                       <button type="submit" id="submitBtn">Reset</button>
                        <p>__________or__________</p>
                        <p class="instead"><span>Register</span> <a href="/signup">Join</a></p>
                     </form>
@@ -72,6 +68,6 @@
             </main>
         </div>
 
-        <script src="{% static 'scripts/signin.js' %}"></script>
+        <script src="{% static 'scripts/forget.js' %}"></script>
     </body>
    </html>

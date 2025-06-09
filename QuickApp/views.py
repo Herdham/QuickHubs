@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages
 from django.http import HttpResponse
 from django.contrib.auth.models import User
-from .models import LibraryCourse
+from .models import LibraryCourse, Users
 # Create your views here.
 
 #for main page
@@ -75,6 +75,28 @@ def signin(request):
             messages.info(request, 'Username is or password is incorrect')
 
     return render(request, 'Template/signin.html')
+
+#for forget_password
+def forget(request):
+    User = get_user_model()
+    if request.method == "POST":
+        email = request.POST.get("email")
+        password = request.POST.get("pass")
+        if User.objects.filter(email=email).exists():
+            user = User.objects.get(email=email)
+            user.set_password(password)
+            if user.is_superuser:
+                messages.info(request, "Password doest allowed to change here")
+                return redirect('/forget')
+            else:
+                user.save()
+                messages.info(request, "Password Reset Successfully")
+                return redirect('/signin')    
+        else:
+            messages.info(request, "It is not")
+            return redirect('/forget')
+    else:
+        return render(request, 'Template/forget.html')
 
 #for student_profile
 @login_required(login_url='signin')
