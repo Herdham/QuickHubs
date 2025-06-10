@@ -56,10 +56,10 @@
                             </a>
 
                             <div class="search">
-                                <form method="post">
+                                <form method="POST">
                                     {% csrf_token %}
-                                    <input type="text" id="searchbar" placeholder="What class are your looking for today?">
-                                    <ion-icon name="close-outline" id="cancleBtn"></ion-icon>                          
+                                    <input type="text" id="searchbar" name="search" placeholder="What class are your looking for today?" required autocomplete="off">
+                                    <ion-icon name="close-outline" id="cancleBtn"></ion-icon>                         
                                     <div class="searchbtn">
                                         <input type="submit" value="" id="srch">
                                         <label for="srch"><ion-icon name="search-outline" id="searchBtn"></ion-icon></label>
@@ -123,7 +123,7 @@
                            </div>
                         </div>
                         <ul class="carouselbody">
-                            <li id="chevron" class="active flex"><a href="#">Categories</a><ion-icon name="chevron-down-outline" id="ion"></ion-icon></li>
+                            <li id="chevron" class="active flex"><a href="#">Services</a><ion-icon name="chevron-down-outline" id="ion"></ion-icon></li>
                             <li><a href="{% url 'p_default' %}">Python</a></li>
                             <li><a href="html/">HTML</a></li>
                             <li><a href="#">JavaScript</a></li>
@@ -147,6 +147,14 @@
                         </ul>
                     </div>
 
+                    <div class="another_search">
+                        <form method="post">
+                            {% csrf_token %}
+                            <input type="text" id="anothersearch" name="search" placeholder="What are you looking for today?" required autocomplete="off">
+                            <input type="submit" value="search">
+                        </form>
+                    </div>
+                    
                     <div class="maincontainer">
                         <div class="mainwrapper">
                             <div class="mainheading">
@@ -207,54 +215,14 @@
                         </div>
 
                         <div class="viewContainer">
-                            <div class="viewWrapper">
-                               <a href="html/">
-                                <p>Start Learning</p>
-                                <h2>HTML</h2>
-                               </a>
-                            </div>
-                            <div class="viewWrapper">
-                                <a href="#">
+                            {% for course in courses %}
+                                <div class="viewWrapper">
+                                <a href="{{course.course_link}}">
                                     <p>Start Learning</p>
-                                    <h2>JavaScript</h2>
+                                    <h2>Learn {{ course.course_name }}</h2>
                                 </a>
-                            </div>
-                            <div class="viewWrapper">
-                                <a href="{% url 'p_default' %}">
-                                    <p>Start Learning</p>
-                                    <h2>Python</h2>
-                                </a>
-                            </div>
-                            <div class="viewWrapper">
-                                <a href="#">
-                                    <p>Start Learning</p>
-                                    <h2>C++</h2>
-                                </a>
-                            </div>
-                            <div class="viewWrapper">
-                                <a href="#">
-                                    <p>Start Learning</p>
-                                    <h2>Java</h2>
-                                </a>
-                            </div>
-                            <div class="viewWrapper">
-                                <a href="#">
-                                    <p>Start Learning</p>
-                                    <h2>CSS</h2>
-                                </a>
-                            </div>
-                            <div class="viewWrapper">
-                                <a href="#">
-                                    <p>Start Learning</p>
-                                    <h2>SQL</h2>
-                                </a>
-                            </div>
-                            <div class="viewWrapper">
-                                <a href="#">
-                                    <p>Start Learning</p>
-                                    <h2>PHP</h2>
-                                </a>
-                            </div>
+                                </div>
+                            {% endfor %}
                         </div>
                     </div><br>
 

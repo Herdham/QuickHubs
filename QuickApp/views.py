@@ -10,9 +10,14 @@ from .models import LibraryCourse, Users
 
 #for main page
 def main(request):
-    template = loader.get_template('Template/main.html')
-    return HttpResponse(template.render())
-
+    if request.method == 'POST':
+        search = request.POST.get('search')
+        course = LibraryCourse.objects.filter(course_name__icontains=search)
+        return render(request, 'Template/result.html', {'course': course})
+    else:
+        courses = LibraryCourse.objects.raw("SELECT * FROM quickapp_librarycourse")[:8]
+        return render(request, "Template/main.html", {'courses': courses})
+    
 #for library
 def library(request):
     library = LibraryCourse.objects.all()

@@ -100,38 +100,6 @@ jQuery(function () {
 })
 
 
-//Second Search Design
-const search_box = document.querySelector(".search_box #searchbar");
-const cancleBtn = document.querySelector(".search_box #cancle_btn");
-
-search_box.addEventListener('keyup', function(e){
-    if (search_box.value == '') {
-        cancleBtn.style.display = 'none'
-    }
-    else{
-        cancleBtn.style.display = 'block'
-    }
-})
-cancleBtn.addEventListener('click', () => {
-    search_box.value = ""
-    cancleBtn.style.display = 'none'
-})
-
-
-const backward = document.querySelector('#backwardBtn');
-const forward = document.querySelector('#forwardBtn');
-const popular = document.querySelector('.popularCourses');
-const popularlist = document.querySelectorAll('.popularCourses ul li');
-backward.addEventListener('click', () => {
-    popular.scrollLeft += 100;
-    popularlist.forEach((item, ind) => {
-        item.style.transition = '2s ease'
-    })
-})
-forward.addEventListener('click', () => {
-    popular.scrollLeft -= 100;
-})
-
 jQuery(() => {
     var scrollback = document.querySelector("#scrollback");
     var scrollforward = document.querySelector("#scrollforward");
@@ -174,11 +142,46 @@ jQuery(() => {
     category.addEventListener('click', category_hide);
 })
 
-const another_search = document.querySelector(".another_search")
-document.querySelector("#OtherSearchBtn").addEventListener('click', (e) => {
-    if (another_search.classList.contains("open")) {
-        another_search.classList.remove('open')
-    }else{
-        another_search.classList.add("open")
-    }
+const othersearch = document.querySelector("#OtherSearchBtn")
+const search_box1 = document.querySelector(".search_box1")
+
+
+jQuery(() => {
+    const first = $('.first')
+    const second = jQuery('.second')
+    const menu = jQuery('.menu')
+    othersearch.addEventListener('click', () => {
+        let search_box1 = document.createElement('div')
+        search_box1.setAttribute('class', 'search_box1')
+        let search = document.createElement('div')
+        search.setAttribute('class', 'searchs')
+        let inputs = document.createElement('input')
+        inputs.setAttribute('type', 'text')
+        inputs.setAttribute('id', 'searchsbar')
+        inputs.setAttribute('placeholder', 'What are you looking for')
+        let icons = document.createElement('ion-icon')
+        icons.setAttribute('name', 'search-outline')
+        icons.setAttribute('class', 'icons')
+        let icons1 = document.createElement('ion-icon')
+        icons1.setAttribute('name', 'close-outline')
+        icons1.setAttribute('class', 'icons_one')
+        search.append(inputs, icons)
+        search_box1.append(search, icons1)
+        $(second).before(search_box1)
+        $(first).hide()
+        $(second).hide()
+
+        if (icons1.classList.contains('icons_one')) {
+            icons1.addEventListener('click', () => {
+                $(search_box1).hide()
+                $(first).show()
+                $(second).show()
+            })
+        }
+    })
 })
+
+
+
+
+
