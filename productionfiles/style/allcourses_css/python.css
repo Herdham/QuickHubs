@@ -366,8 +366,6 @@
 }
 
 
-
-
 ::-webkit-scrollbar{
     width: 5px;
 }
@@ -554,7 +552,7 @@
 .allmainpage main .maincontainer{
     margin-left: 22%;
     margin-right: 70px;
-    padding-top: 170px;
+    padding-top: 120px;
 }
 
 .allmainpage main .maincontainer b{
@@ -593,13 +591,6 @@
     text-decoration: none;
     color: #fff;
     font-size: 17px;
-}
-
-.allmainpage main .maincontainer .study{
-    background-color: #cff5ed;
-    padding: 35px;
-    line-height: 3;
-    margin-bottom: 20px;
 }
 
 .allmainpage main .maincontainer .studyeditor{

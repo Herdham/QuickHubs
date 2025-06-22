@@ -168,7 +168,7 @@
 .allmain nav .navbar .second .join{
     padding: 8px;
     border-radius: 2px;
-    border: 1px solid var(--firstcolor);
+    border: 1px solid #008080;
     white-space: nowrap;
     text-decoration: none;
     width: 100px;
@@ -370,8 +370,8 @@
     width: 100%;
     border: none;
     outline: none;
-    background-color: #000000;
-    color: #ffd700;
+    background-color: #008080;
+    color: #ffffff;
     border-radius: 2px;
     padding: 10px;
     cursor: pointer;

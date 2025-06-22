@@ -20,8 +20,13 @@ def main(request):
     
 #for library
 def library(request):
-    library = LibraryCourse.objects.all()
-    return render(request, 'Template/library.html', {'library': library})
+    if request.method == 'POST':
+        search = request.POST.get('search')
+        course = LibraryCourse.objects.filter(course_name__icontains=search)
+        return render(request, 'Template/result.html', {'course': course})
+    else:
+        library = LibraryCourse.objects.all()
+        return render(request, 'Template/library.html', {'library': library})
 
 #for libraryupload
 @login_required(login_url='/signin')

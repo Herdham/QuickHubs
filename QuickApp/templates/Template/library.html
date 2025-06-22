@@ -58,7 +58,7 @@
                             <div class="search">
                                 <form method="post">
                                     {% csrf_token %}
-                                    <input type="text" id="searchbar" placeholder="What class are your looking for today?">
+                                    <input type="text" id="searchbar" name="search" placeholder="What class are your looking for today?">
                                     <ion-icon name="close-outline" id="cancleBtn"></ion-icon>                          
                                     <div class="searchbtn">
                                         <input type="submit" value="" id="srch">
@@ -89,7 +89,6 @@
                             <li class="become"><a href="{% url 'become' %}">Become a Seller</a></li>
                             <li class="signin"><a href="{% url 'signin' %}">Sign In</a></li>
                         </ul>
-                        <ion-icon name="search-outline" id="OtherSearchBtn"></ion-icon>
                         <a href="{% url 'signup' %}" class="join">Joins</a>
                         </div>
                     </div>

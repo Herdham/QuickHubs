@@ -85,12 +85,12 @@
 
                         <!-- nav second -->
                         <div class="second">
-                        <ul>
-                            <li class="become"><a href="{% url 'become' %}">Become a Seller</a></li>
-                            <li class="signin"><a href="{% url 'signin' %}">Sign In</a></li>
-                        </ul>
-                        <ion-icon name="search-outline" id="OtherSearchBtn"></ion-icon>
-                        <a href="{% url 'signup' %}" class="join">Joins</a>
+                            <ul>
+                                <li class="become"><a href="{% url 'become' %}">Become a Seller</a></li>
+                                <li class="signin"><a href="{% url 'signin' %}">Sign In</a></li>
+                            </ul>
+                            <ion-icon name="search-outline" id="OtherSearchBtn"></ion-icon>
+                            <a href="{% url 'signup' %}" class="join">Joins</a>
                         </div>
                     </div>
                 </nav>
@@ -145,6 +145,14 @@
                             <li><a href="#">Literature</a></li>
                             <li><a href="#">More...</a></li>
                         </ul>
+                    </div>
+
+                    <div class="another_search">
+                        <form method="post">
+                            {% csrf_token %}
+                            <input type="text" id="anothersearch" name="search" placeholder="What are you looking for today?" required autocomplete="off">
+                            <input type="submit" value="search">
+                        </form>
                     </div>
 
                     <div class="search_result">
