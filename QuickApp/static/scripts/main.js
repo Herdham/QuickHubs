@@ -171,6 +171,12 @@ jQuery(() => {
         (x.remove("category_show"), chevron.innerHTML = `<a href="#">Services</a> <ion-icon name="chevron-down-outline"></ion-icon>`):
         (x.add("category_show"), chevron.innerHTML = `<a href="#">Services</a> <ion-icon name="chevron-up-outline"></ion-icon>`)
     }
+    document.body.querySelector("main .maincontainer").addEventListener('click', () => {
+        if(category_inner.classList.contains("category_show")){
+            category_inner.classList.remove("category_show");
+            chevron.innerHTML = `<a href="#">Services</a> <ion-icon name="chevron-down-outline"></ion-icon>`
+        }
+    })
     category.addEventListener('click', category_hide);
 })
 
