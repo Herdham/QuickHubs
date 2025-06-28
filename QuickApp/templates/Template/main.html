@@ -24,7 +24,7 @@
                 <menu>
                     <div class="menu">
                         <div class="menu_join flex">
-                            <a href="#"><button type="button">Join</button></a>
+                            <a href="{% url 'signup' %}"><button type="button">Join</button></a>
                             <ion-icon name="close-outline" class="menuclose"></ion-icon>
                         </div>
 
@@ -37,7 +37,7 @@
                                 <li class="flex"><ion-icon name="library-outline"></ion-icon><a href="#">Library</a></li>
                                 <li class="flex"><ion-icon name="book-outline"></ion-icon><a href="#">Ebooks</a></li>
                                 <li class="flex"><ion-icon name="build-outline"></ion-icon><a href="#">Tools</a></li>
-                                <li class="flex"><ion-icon name="log-in-outline"></ion-icon><a href="#">Sign In</a></li>
+                                <li class="flex"><ion-icon name="log-in-outline"></ion-icon><a href="{% url 'signin'%}">Sign In</a></li>
                             </ul>
                         </div>
                     </div>

@@ -245,7 +245,7 @@
 .allmainpage menu .othersidebar{
     width: 20%;
     height: 100vh;
-    background-color: #dddddd;
+    background-color: #fff;
     position: fixed;
     padding: 15px;
     padding-top: 130px;
@@ -256,7 +256,7 @@
 
 .allmainpage menu .othersidebar h3{
     color: #000;
-    font-weight: 200;
+    font-weight: 700;
     margin-bottom: 8px;
 }
 
@@ -267,15 +267,22 @@
 .allmainpage menu .othersidebar ul li{
     list-style: none;
     padding: 8px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
 }
 
 .allmainpage menu .othersidebar ul li:hover{
-    background-color: #ccc;
-    color: #000;
+    background-color: #008080;
+}
+
+.allmainpage menu .othersidebar ul li:hover a{
+    color: #fff;
 }
 
 .allmainpage menu .othersidebar ul li.active{
-    background-color: green;
+    background-color: #008080;
 }
 
 .allmainpage menu .othersidebar ul li.active a{
@@ -508,7 +515,7 @@
 .allmainpage main .sidebar{
     width: 20%;
     height: 100vh;
-    background-color: #dddddd;
+    background-color: #ffffff;
     position: fixed;
     padding: 15px;
     padding-top: 130px;
@@ -517,7 +524,7 @@
 
 .allmainpage main .sidebar h3{
     color: #000;
-    font-weight: 200;
+    font-weight: 700;
     margin-bottom: 8px;
 }
 
@@ -528,15 +535,22 @@
 .allmainpage main .sidebar ul li{
     list-style: none;
     padding: 8px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    margin-bottom: 10px;
 }
 
 .allmainpage main .sidebar ul li:hover{
-    background-color: #ccc;
-    color: #000;
+    background-color: #008080;
+}
+
+.allmainpage main .sidebar ul li:hover a{
+    color: #fff;
 }
 
 .allmainpage main .sidebar ul li.active{
-    background-color: green;
+    background-color: #008080;
 }
 
 .allmainpage main .sidebar ul li.active a{
@@ -546,12 +560,13 @@
 .allmainpage main .sidebar ul li a{
     text-decoration: none;
     color: #000;
+    white-space: nowrap;
 }
 
 
 .allmainpage main .maincontainer{
-    margin-left: 22%;
-    margin-right: 70px;
+    margin-left: 21.5%;
+    margin-right: 10px;
     padding-top: 120px;
 }
 
@@ -559,9 +574,6 @@
     color: red;
 }
 
-.allmainpage main .maincontainer .allmain{
-    padding: 30px;
-}
 
 .allmainpage main .maincontainer h1{
     margin-bottom: 10px;
@@ -600,9 +612,6 @@
     margin-bottom: 20px;
 }
 
-.allmainpage main .maincontainer .step img{
-    width: 400px;
-}
 
 .allmainpage main .maincontainer .step a{
     text-decoration: none;
@@ -858,7 +867,7 @@
     }
 
     .allmainpage main .maincontainer{
-        margin-left: 0%;
+        margin-left: 10px;
         margin-right: 10px;
     }
 

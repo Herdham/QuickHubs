@@ -82,7 +82,7 @@ def signin(request):
             login(request, user)
             return redirect('/profile')
         else:
-            messages.info(request, 'Username is or password is incorrect')
+            messages.info(request, 'Username or password is incorrect')
 
     return render(request, 'Template/signin.html')
 
