@@ -150,14 +150,14 @@
                         </div>
 
                         <div class="all_library">
-                            {% for library in library %}
+                            {% for langcourse in langcourses %}
                                 <div class="courses">
                                     <div class="courses_heading">
-                                        <h4 class="coursename"><a href="{{library.course_link}}">Learn {{library.course_name}}</a></h4>
-                                        <a class="start" href="{{library.course_link}}">Start</a>
+                                        <h4 class="coursename"><a href="{{langcourse.course_link}}">Learn {{langcourse.course_name}}</a></h4>
+                                        <a class="start" href="{{langcourse.course_link}}">Start</a>
                                     </div>
                                     <div class="choice">
-                                        <a href="#">{{library.reference}}</a>
+                                        <a href="#">{{langcourse.reference}}</a>
                                         <a href="#">Certification</a>
                                     </div>
                                 </div>

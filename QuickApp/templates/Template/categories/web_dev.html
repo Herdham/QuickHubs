@@ -5,15 +5,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Become Instructor - Online Tutorial & Freelance Service Marketplace</title>
-        <link rel="stylesheet" href="{% static '/style/teacher_css/become.css' %}">
+        <title>QuickHub - Online Tutorial | Video Courses | Ebooks | Freelance Service Marketplace</title>
+        <link rel="stylesheet" href="{% static 'style/library.css' %}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@300;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sahitya:wght@400;700&display=swap" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="180x180" href="{% static '/images/logo/quickfav/apple-touch-icon.png' %}">
         <link rel="icon" type="image/png" sizes="32x32" href="{% static '/images/logo/quickfav/favicon-32x32.png' %}">
         <link rel="icon" type="image/png" sizes="16x16" href="{% static '/images/logo/quickfav/favicon-16x16.png' %}">
-        <link rel="manifest" href="{static '/images/logo/quickfav/site.webmanifest'}">
+        <link rel="manifest" href="{% static '/images/logo/quickfav/site.webmanifest' %}">
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -30,7 +30,7 @@
 
                         <div class="menu_categories">
                             <ul>
-                                <li class="flex"><ion-icon name="home-outline"></ion-icon><a href="/Template/main.html">Home</a></li>
+                                <li class="flex"><ion-icon name="business-outline"></ion-icon><a href="#">Top Seller</a></li>
                                 <li class="flex"><ion-icon name="bag-outline"></ion-icon><a href="#">Jobs</a></li>
                                 <li class="flex"><ion-icon name="grid-outline"></ion-icon><a href="#">QuickHub Pro</a></li>
                                 <li class="flex"><ion-icon name="library-outline"></ion-icon><a href="#">Library</a></li>
@@ -42,6 +42,7 @@
                     </div>
                 </menu>
 
+                <!-- Navbar -->
                 <nav>
                     <div class="navbar">
                         <!-- nav first -->
@@ -56,7 +57,7 @@
                             <div class="search">
                                 <form method="post">
                                     {% csrf_token %}
-                                    <input type="text" id="searchbar" placeholder="What class are your looking for today?">
+                                    <input type="text" id="searchbar" name="search" placeholder="What class are your looking for today?">
                                     <ion-icon name="close-outline" id="cancleBtn"></ion-icon>                          
                                     <div class="searchbtn">
                                         <input type="submit" value="" id="srch">
@@ -84,17 +85,17 @@
                         <!-- nav second -->
                         <div class="second">
                         <ul>
-                            <li class="become"><a href="{% url 'main' %}">Home</a></li>
-                            <li class="signin"><a href="{% url 'instructor_signin' %}">Sign In</a></li>
+                            <li class="signin"><a href="{% url 'signin' %}">Sign In</a></li>
                         </ul>
-                        <ion-icon name="search-outline" id="OtherSearchBtn"></ion-icon>
-                        <a href="{% url 'instructor_signup' %}" class="join">Joins</a>
+                        <a href="{% url 'signup' %}" class="join">Joins</a>
                         </div>
                     </div>
                 </nav>
+                
 
+                <!--Main container-->
                 <main>
-
+                    
                     <div class="carousel">
                         <div class="scrollBtn">
                             <ion-icon name="chevron-back-outline" id="scrollback"></ion-icon>
@@ -102,24 +103,19 @@
                         </div>
                         <div class="categories_inner">
                            <div class="category_wrapper">
-                                <li class="active"><a href="#">Web Development Course</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Programmings language</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Mobile Development</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Python Technologies</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Education Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Arabic Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Business Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Forex Trading Course</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Freelancing Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Data Engineering</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Marketing Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Software Engineering</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Software Testing</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">AI Technologies</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li class="active"><a href="{% url 'web_dev' %}">Web Development Course</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'p_lang' %}">Programmings language</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'al_ml_ds' %}">Al, ML and Data Science</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'py_tech' %}">Python Technologies</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'edu_course' %}">Education Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'ar_course' %}">Arabic Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'devops' %}">DevOps</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'database' %}">Databases</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'st_testing' %}">Software Testing</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
                            </div>
                         </div>
                         <ul class="carouselbody">
-                            <li id="chevron" class="active flex"><a href="#">Categories</a><ion-icon name="chevron-down-outline" id="ion"></ion-icon></li>
+                            <li id="chevron" class="active flex"><a href="#">Services</a><ion-icon name="chevron-down-outline" id="ion"></ion-icon></li>
                             <li><a href="{% url 'p_default' %}">Python</a></li>
                             <li><a href="html/">HTML</a></li>
                             <li><a href="#">JavaScript</a></li>
@@ -141,65 +137,58 @@
                             <li><a href="#">Literature</a></li>
                             <li><a href="#">More...</a></li>
                         </ul>
-                    </div>
+                    </div><br><br>
                     
-                   <div class="instructor_wrapper">
-                        <div class="instructor_body">
-                            <div class="instructor_header">
-                                <h1>Teach <b>With Us</b></h1>
-                                <h4>Inspire a global audience with us online</h4>
-                                <h2>Work Your Way</h2>
-                                <p>You bring the skill. We'll make your earn.</p>
-                                <span>"Develop a passion for learning. If you do, you will never cease to grow. Because a great aim of education is not about knowledge but action."</span>
-                                <span>"In learning you will teach, and in teaching you will learn."</span>
-                                <a href="/instructor_signup"><button type="button">Teach Now</button></a>
-                            </div>
+                    <div class="library">
+                        <div class="heading">
+                            <h1>Search for bunchs of tutorials</h1>
+                            <form method="post">
+                                {% csrf_token %}
+                                <input type="text" name="search" id="searchbtn" placeholder="What are you looking for today?" autocomplete="off" required>
+                                <input type="submit" value="Search">
+                            </form>
                         </div>
-                        <div class="Img">
-                            <img src="{% static '/images/imagetwo.png'%}" alt="">
-                        </div>
-                   </div>
 
-                   <div class="instructor_guide">
-                        <h1>How it Works</h1>
-                        <div class="guide_info">
-                            <div class="same_info">
-                                <ion-icon name="business-outline"></ion-icon>
-                                <h3>1. Create a course</h3>
-                                <p>Sign up for free, set up your course, and offer your work to our global audience</p>
-                            </div>
-                            <div class="same_info">
-                                <ion-icon name="location-outline"></ion-icon>
-                                <h3>2. Deliver great work</h3>
-                                <p>Get notified when you get an order and use our system to discuss details with customers</p>
-                            </div>
-                            <div class="same_info">
-                                <ion-icon name="wallet-outline"></ion-icon>
-                                <h3>3. Get paid</h3>
-                                <p>Get paid on time, every time. Payment is available for withdraw as soon as it clears.</p>
-                            </div>
+                        <div class="all_library">
+                            {% for webcourse in webcourses %}
+                                <div class="courses">
+                                    <div class="courses_heading">
+                                        <h4 class="coursename"><a href="{{webcourse.course_link}}">Learn {{webcourse.course_name}}</a></h4>
+                                        <a class="start" href="{{webcourse.course_link}}">Start</a>
+                                    </div>
+                                    <div class="choice">
+                                        <a href="#">{{webcourse.reference}}</a>
+                                        <a href="#">Certification</a>
+                                    </div>
+                                </div>
+                            {% endfor %}
                         </div>
-                   </div>
+                    </div>
 
-                   <div class="learning">
-                        <div class="learning_inspire">
-                            <div class="learning_header">
-                                <h1>learn</h1>
-                                <h3>One-demand profession courses, <br>led by the world's leading experts</h3>
-                                <p>Discover what it takes to be a top-notch seller on QuickHub with <br> this complimentary Learn from QuickHub course.</p>
-                                <a href="#"><button type="button">Learn More...</button></a>
+                    <div class="membership">
+                        <div class="annual">
+                            <div class="annualWrap">
+                                <h2>Annual Membership</h1>
+                                <p>Become a valued member of Tutorials Point and enjoy unlimited access to our vast library of top-rated Video Courses</p>
+                                <button>Suscribe Now!</button>
                             </div>
+                            <img src="{% static '/images/annual-membership.jpg'%}" alt="">
                         </div>
-                        <div class="learning_image">
-                            <img src="{% static '/images/another.png'%}" alt="">
+                        <div class="certification">
+                            <div class="certificateWrap">
+                                <h2>Online Certifications</h1>
+                                <p>Master prominent technologies at full length and become a valued certified professional.</p>
+                                <button>Explore Now!</button>
+                            </div>
+                            <img src="{% static '/images/traning-for-a-team.jpg'%}" alt="">
                         </div>
-                   </div>
+                    </div>
                 </main>
 
                 <footer>
                     <div class="first">
                         <a href="#" class="logo">
-                            <img src="{% static '/images/logo/quicklogo1.png'%}" alt="">
+                            <img src="{% static '/images/logo/quicklogo1.png' %}" alt="">
                             <h1>QuickHub</h1>
                         </a>
                         <p>QuickHub is a leading Ed Tech <br> company striving to provide the best <br> learning material on technical and non-<br>technical subjects.</p>
@@ -240,8 +229,10 @@
                         </div>
                     </div>
                 </footer>
-            </div>
-            <script src="{% static '/scripts/teacher_js/become.js'%}"></script>
-    </body>
+           </div>
 
+        
+           <script src="{% static 'scripts/library.js' %}"></script>
+   </body>
+    
 </html>

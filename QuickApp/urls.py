@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from . import courses_view, categories
 
 urlpatterns = [
     path('', views.main, name='main'),
@@ -10,11 +11,19 @@ urlpatterns = [
     path('forget/', views.forget, name='forget'),
     path('signout/', views.signout, name='signout'),
     path('profile/', views.profile, name='profile'),
-    path('become/', views.become, name='become'),
-    path('instructor_signup/', views.instructor_signup, name='instructor_signup'),
-    path('instructor_signin/', views.instructor_signin, name='instructor_signin'),
-    #for html course
 
+    #for categories
+    path('web_dev/', categories.web_dev, name='web_dev'),
+    path('p_lang/', categories.p_lang, name='p_lang'),
+    path('al_ml_ds/', categories.al_ml_ds, name='al_ml_ds'),
+    path('edu_course/', categories.edu_course, name='edu_course'),
+    path('ar_course/', categories.ar_course, name='ar_course'),
+    path('devops/', categories.devops, name='devops'),
+    path('database/', categories.database, name='database'),
+    path('st_testing/', categories.st_testing, name='st_testing'),
+    path('py_tech/', categories.py_tech, name='py_tech'),
+
+    #for html course
     path('html/', views.html_default, name='html'),
     path('html_intro/', views.html_intro, name='html_intro'),
     path('html_editor/', views.html_editor, name='html_editor'),
@@ -24,6 +33,10 @@ urlpatterns = [
     path('html_heading/', views.html_heading, name='html_heading'),
     path('html_para/', views.html_para, name='html_para'),
     path('html_style/', views.html_style, name='html_style'),
+
+    #for css course
+    path("css/", courses_view.css, name='css'),
+    path("css_style/", courses_view.css_style, name='css_style'),
 
     #for hijamah course
     path('default/', views.hijamah_default, name='default'),

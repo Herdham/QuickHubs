@@ -28,6 +28,7 @@ def library(request):
         library = LibraryCourse.objects.all()
         return render(request, 'Template/library.html', {'library': library})
 
+
 #for libraryupload
 @login_required(login_url='/signin')
 @user_passes_test(lambda user: user.is_superuser)
@@ -123,19 +124,6 @@ def signout(request):
     return redirect('signin')
 
 
-#for become page
-def become(request):
-      return render(request, 'Template/teacher_template/become_instructor.html')  
-
-#for instructor signup
-def instructor_signup(request):
-    return render(request, 'Template/teacher_template/teacher_signup.html')
-
-#for instructor signin
-def instructor_signin(request):
-    template = loader.get_template('Template/teacher_template/teacher_signin.html')
-    return HttpResponse(template.render())
-
 #for html tutorial
 def html_default(request):
     template = loader.get_template('Template/allcourses/language/html/default.html')
@@ -211,3 +199,4 @@ def p_intro(request):
 
 def p_begin(request):
     return render(request, 'Template/allcourses/language/python/p_begin.html')
+

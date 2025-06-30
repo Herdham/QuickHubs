@@ -150,18 +150,22 @@
                         </div>
 
                         <div class="all_library">
-                            {% for library in library %}
+                            {% if webcourse %}
+                            {% for webcourse in webcourses %}
                                 <div class="courses">
                                     <div class="courses_heading">
-                                        <h4 class="coursename"><a href="{{library.course_link}}">Learn {{library.course_name}}</a></h4>
-                                        <a class="start" href="{{library.course_link}}">Start</a>
+                                        <h4 class="coursename"><a href="{{webcourse.course_link}}">Learn {{webcourse.course_name}}</a></h4>
+                                        <a class="start" href="{{webcourse.course_link}}">Start</a>
                                     </div>
                                     <div class="choice">
-                                        <a href="#">{{library.reference}}</a>
+                                        <a href="#">{{webcourse.reference}}</a>
                                         <a href="#">Certification</a>
                                     </div>
                                 </div>
-                            {% endfor %}
+                                {% endfor %}
+                                {% else %}
+                                    <h1 style="text-align: center;">Coming Soon.... </h1>
+                                {% endif %}
                         </div>
                     </div>
 

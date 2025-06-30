@@ -31,7 +31,6 @@
                         <div class="menu_categories">
                             <ul>
                                 <li class="flex"><ion-icon name="business-outline"></ion-icon><a href="#">Top Seller</a></li>
-                                <li class="flex"><ion-icon name="bag-outline"></ion-icon><a href="{% url 'become' %}">Become a Teacher</a></li>
                                 <li class="flex"><ion-icon name="bag-outline"></ion-icon><a href="#">Jobs</a></li>
                                 <li class="flex"><ion-icon name="grid-outline"></ion-icon><a href="#">QuickHub Pro</a></li>
                                 <li class="flex"><ion-icon name="library-outline"></ion-icon><a href="#">Library</a></li>
@@ -86,7 +85,6 @@
                         <!-- nav second -->
                         <div class="second">
                         <ul>
-                            <li class="become"><a href="{% url 'become' %}">Become a Seller</a></li>
                             <li class="signin"><a href="{% url 'signin' %}">Sign In</a></li>
                         </ul>
                         <ion-icon name="search-outline" id="OtherSearchBtn"></ion-icon>
@@ -106,20 +104,15 @@
                         </div>
                         <div class="categories_inner">
                            <div class="category_wrapper">
-                                <li class="active"><a href="#">Web Development Course</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Programmings language</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Mobile Development</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Python Technologies</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Education Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Arabic Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Business Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Forex Trading Course</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Freelancing Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Data Engineering</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Marketing Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Software Engineering</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Software Testing</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">AI Technologies</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li class="active"><a href="{% url 'web_dev' %}">Web Development Course</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'p_lang' %}">Programmings language</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'al_ml_ds' %}">Al, ML and Data Science</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'py_tech' %}">Python Technologies</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'edu_course' %}">Education Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'ar_course' %}">Arabic Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'devops' %}">DevOps</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'database' %}">Databases</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'st_testing' %}">Software Testing</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
                            </div>
                         </div>
                         <ul class="carouselbody">
@@ -168,7 +161,7 @@
                                     <h4>Try Check:</h4>
                                     <ul>
                                         <li><a href="{% url 'library' %}">Library</a></li>
-                                        <li><a href="#">Courses</a></li>
+                                        <li><a href="{% url 'p_lang' %}">Courses</a></li>
                                         <li><a href="#">Most Buy</a></li>
                                         <li><a href="#">Top Seller</a></li>
                                     </ul>
@@ -191,7 +184,7 @@
                         </div>
                         <div class="popularCourses">
                             <ul>
-                                <li><a href="#">Web Development</a></li>
+                                <li><a href="{% url 'web_dev' %}">Web Development</a></li>
                                 <li><a href="#">Mobile Development</a></li>
                                 <li><a href="#">Education Courses</a></li>
                                 <li><a href="#">Arabic Courses</a></li>
@@ -208,7 +201,7 @@
                         <div class="viewheading">
                             <h1>Start <b>Learning</b></h1>
                             <div class="viewBtn flex">
-                                <a href="#"><button type="button">See All</button></a>
+                                <a href="{% url 'library' %}"><button type="button">See All</button></a>
                                 <ion-icon name="chevron-back-outline" id="firstBtn"></ion-icon>
                                 <ion-icon name="chevron-forward-outline" id="lastBtn"></ion-icon>
                             </div>
@@ -234,7 +227,7 @@
                             <div class="tutorialcontainer">
                                 <div class="tutorheading">
                                     <h4>Web Development</h4>
-                                    <button type="button"><a href="#">See all</a></button>
+                                    <button type="button"><a href="{% url 'web_dev' %}">See all</a></button>
                                 </div>
                                 
                                 <div class="tutorcourse">
@@ -244,7 +237,7 @@
                                             <h5>Html Tutorial</h5>
                                         </div>
                                     </a>
-                                    <a href="#">
+                                    <a href="{% url 'css' %}">
                                         <div class="tutorinner">
                                             <img src="{% static '/images/allcourses/css_icon.svg' %}" alt="">
                                             <h5>CSS Tutorial</h5>
@@ -258,8 +251,8 @@
                                     </a>
                                     <a href="#">
                                         <div class="tutorinner">
-                                            <img src="{% static '/images/allcourses/python_icon.svg'%}" alt="">
-                                            <h5>Python Tutorial</h5>
+                                            <img src="{% static '/images/allcourses/php-logo.webp'%}" alt="">
+                                            <h5>Php Tutorial</h5>
                                         </div>
                                     </a>
                                     <a href="#">
@@ -280,11 +273,11 @@
                             <div class="tutorialcontainer">
                                 <div class="tutorheading">
                                     <h4>Programming Language</h4>
-                                    <button type="button"><a href="#">See all</a></button>
+                                    <button type="button"><a href="{% url 'p_lang' %}">See all</a></button>
                                 </div>
                                 
                                 <div class="tutorcourse">
-                                    <a href="#">
+                                    <a href="{% url 'p_default' %}">
                                         <div class="tutorinner">
                                             <img src="{% static '/images/allcourses/python_icon.svg'%}" alt="">
                                             <h5>Python Tutorial</h5>

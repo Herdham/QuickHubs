@@ -5,15 +5,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Introductin to Python Tutorial Course </title>
-        <link rel="stylesheet" href="{% static '/style/allcourses_css/python.css'%}">
+        <title>CSS Tutorial Course</title>
+        <link rel="stylesheet" href="{% static '/style/allcourses_css/html_intro.css'%}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@300;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sahitya:wght@400;700&display=swap" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="180x180" href="{% static '/images/logo/quickfav/apple-touch-icon.png' %}">
         <link rel="icon" type="image/png" sizes="32x32" href="{% static '/images/logo/quickfav/favicon-32x32.png' %}">
         <link rel="icon" type="image/png" sizes="16x16" href="{% static '/images/logo/quickfav/favicon-16x16.png' %}">
-        <link rel="manifest" href="{% static '/images/logo/quickfav/site.webmanifest'%}">
+        <link rel="manifest" href="{static '/images/logo/quickfav/site.webmanifest'}">
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -23,18 +23,18 @@
            <div class="allmainpage">
                <menu>
                     <div class="othersidebar">
-                        <h3>Python Tutorial</h3>
+                        <h3>Css Tutorial</h3>
                         <ul>
-                            <li><a href="{% url 'p_default' %}">Python Home</a></li>
-                            <li><a href="{% url 'p_intro' %}">Python Introduction</a></li>
-                            <li><a href="{% url 'p_begin' %}">Python Begin</a></li>
-                            <li><a href="#">Python Syntax</a></li>
-                            <li><a href="#">Python Comment</a></li>
-                            <li><a href="#">Python Variable</a></li>
-                            <li><a href="#">Python Datatypes</a></li>
-                            <li><a href="#">Python String</a></li>
-                            <li><a href="#">Python Number</a></li>
-                            <li><a href="#">Python Casting</a></li>
+                            <li class="active"><a href="/html">CSS Home</a></li>
+                            <li><a href="/css_intro">CSS Introduction</a></li>
+                            <li><a href="/css_syntax">CSS Syntax & Selector</a></li>
+                            <li><a href="/css_font">Fonts & Text Styling</a></li>
+                            <li><a href="/css_model">Box Model</a></li>
+                            <li><a href="/css_space">Margin, Padding, Border</a></li>
+                            <li><a href="/css_display">CSS Layouts: Display, Position</a></li>
+                            <li><a href="/css_flex">Flexbox</a></li>
+                            <li><a href="/css_grid">Grid</a></li>
+                            <li><a href="/css_media">Media Queries(Responsive Design)</a></li>
                         </ul>
                     </div>
                </menu>
@@ -96,19 +96,15 @@
                         </div>
                         <div class="categories_inner">
                            <div class="category_wrapper">
-                                <li class="active"><a href="#">Web Development Course</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Mobile Development</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Python Technologies</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Education Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Arabic Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Business Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Forex Trading Course</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Freelancing Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Data Engineering</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Marketing Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Software Engineering</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">Software Testing</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
-                                <li><a href="#">AI Technologies</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li class="active"><a href="{% url 'web_dev' %}">Web Development Course</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'p_lang' %}">Programmings language</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'al_ml_ds' %}">Al, ML and Data Science</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'py_tech' %}">Python Technologies</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'edu_course' %}">Education Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'ar_course' %}">Arabic Courses</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'devops' %}">DevOps</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'database' %}">Databases</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                                <li><a href="{% url 'st_testing' %}">Software Testing</a><ion-icon name="arrow-forward-outline"></ion-icon></li>
                            </div>
                         </div>
                         <ul class="carouselbody">
@@ -136,79 +132,74 @@
 
                 <main>
                     <div class="sidebar">
-                        <h3>Python Tutorial</h3>
+                        <h3>Css Tutorial</h3>
                         <ul>
-                            <li><a href="{% url 'p_default' %}">Python Home</a></li>
-                            <li><a href="{% url 'p_intro' %}">Python Introduction</a></li>
-                            <li><a href="{% url 'p_begin' %}">Python Begin</a></li>
-                            <li><a href="#">Python Syntax</a></li>
-                            <li><a href="#">Python Comment</a></li>
-                            <li><a href="#">Python Variable</a></li>
-                            <li><a href="#">Python Datatypes</a></li>
-                            <li><a href="#">Python String</a></li>
-                            <li><a href="#">Python Number</a></li>
-                            <li><a href="#">Python Casting</a></li>
+                            <li class="active"><a href="/html">CSS Home</a></li>
+                            <li><a href="/css_syntax">CSS Syntax & Selector</a></li>
+                            <li><a href="/css_intro">CSS Colors, Backgrounds</a></li>
+                            <li><a href="/css_font">Fonts & Text Styling</a></li>
+                            <li><a href="/css_model">Box Model</a></li>
+                            <li><a href="/css_space">Margin, Padding, Border</a></li>
+                            <li><a href="/css_display">CSS Layouts: Display, Position</a></li>
+                            <li><a href="/css_flex">Flexbox</a></li>
+                            <li><a href="/css_grid">Grid</a></li>
+                            <li><a href="/css_media">Media Queries(Responsive Design)</a></li>
                         </ul>
                     </div>
 
                     <div class="maincontainer">
                         <div class="allmain">
-                            <h1>Introduction to Python</h1>
+                            <h1>CSS Syntax & Selector</h1>
                             <div class="prevNext">
-                                <a href="{% url 'p_default' %}">Previous</a>
-                                <a href="{% url 'p_begin' %}">Next</a>
+                                <a href="/css">Previous</a>
+                                <a href="#">Next</a>
                             </div>
                             
-                            
-                            <div class="studyeditor">
-                                <p>-> In the last chapter we talk more about how python works 
-                                and how to print a message to the console using print() function.</p>
-                                <p>-> In this chapter we are going to talk more about how print() function works
-                                    with some real world and amazing example.
-                                </p>
-                                <p>-> If we look at the previous chapter we are going to see the print() function only has 
-                                    one arguement which is "Hello World" and python can take many arguement as you prefer.
-                                </p>
-                            </div>
-                             <h2>Learning by the example below</h2>  
+                            <p><b>CSS Syntax & Selector</b>, to target HTML elements and apply styles</p><br>
+
                             <div class="example">
                                 <h3>Example</h3>
                                 <div class="exampleinner">
-                                    <p style="color: red;"><span style="color: green;">print</span>
-                                    ("Hello World!", "Hello John", "Hello Smith")</p>
+                                    <p>&lt;!DOCTYPE html&gt;</p>
+                                    <p>&lt;html&gt;</p>
+                                    <p>&lt;head&gt;</p>
+                                    <div class="tags">&lt;Page title&gt;</div>
+                                    <p>&lt; style &gt;</p>
+                                    <p> p &#123; </p>
+                                    <span style="margin-left: 20px;">color: blue;</span><br>
+                                    <span style="margin-left: 20px;">font-size: 18px;</span>
+                                    <p> &#125; </p>
+                                    <p>&lt; /style &gt;</p>
+                                    <p>&lt;/head&gt;</p>
+                                    <p>&lt;body&gt;</p>
+                                    <div class="tags"><span>&lt; p &gt;</span>This is a paragraph <span>&lt;/p&gt;</span></div>
+                                     <span style="color: #212529;">#this will change the paragraph content below to blue and font size of 18px on the browser</span>
+                                    <p>&lt;/body&gt;</p>
+                                    <p>&lt;/html&gt;</p>
                                 </div>
-                            </div>
-                            
-                            <div class="example">
-                                <h4>And you can use as many print() function as you want</h4>
-                                <p>-> But note they are going to print on a newline</p><br>
-                                <div class="exampleinner">
-                                    <p style="color: red;"><span style="color: green;">print</span>("Hello World!")</p>
-                                    <p style="color: red;"><span style="color: green;">print</span>("Hello Smith!")</p>
-                                    <p style="color: red;"><span style="color: green;">print</span>("Hello John!")</p>
-                                    <p style="color: #000;">#output</p>
-                                    <p>Hello World!</p>
-                                    <p>Hello Smith!</p>
-                                    <p>Hello John!</p>
-                                </div>
-                            </div>
-                            <p>Try the example below in your code editor and see the output</p><br>
-                            <div class="optional">
-                                <h1>Optional Features</h1>
-                                <p>Log in to your account, and start earning points!</p>
-                                <p>With this optional Features you can study at QuickHub without any paid.</p>
                             </div>
 
+                            <div class="study">
+                                <p>Type of selectors</p>
+                                <ul>
+                                    <li>Tag selector: p, h1</li>
+                                    <li>Class selector: .myClass</li>
+                                    <li>Id selector: #myId</li>
+                                    <li>Grouped: h1, h2, h3</li>
+                                </ul>
+                            </div>
+                            <p style="margin-bottom: 5px;">Try the example below in your code editor</p>
+
                             <div class="prevNext">
-                                <a href="{% url 'p_default' %}">Previous</a>
-                                <a href="{% url 'p_begin' %}">Next</a>
+                                <a href="/css">Previous</a>
+                                <a href="#">Next</a>
                             </div>
                         </div>
                     </div>
 
                     <footer>
                         <div class="first">
-                            <a href="#" class="logo">
+                            <a href="/" class="logo">
                                 <img src="{% static '/images/logo/quicklogo1.png'%}" alt="">
                                 <h1>QuickHub</h1>
                             </a>
@@ -254,6 +245,6 @@
 
            </div>
     
-           <script src="{% static '/scripts/all_courses_js/python.js'%}"></script>
+           <script src="{% static '/scripts/all_courses_js/html_intro.js'%}"></script>
    </body>
 </html>
